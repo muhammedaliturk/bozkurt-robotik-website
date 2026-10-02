@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Bozkurt Robotik — Akıllı motor kontrol sistemleri, gömülü kontrol yazılımları ve sensör modülleri." />
+  <meta name="theme-color" content="#0b1a2a" />
+  <title>Bozkurt Robotik | Intelligent Motor Control & Embedded Sensing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Bozkurt Robotik ana sayfa">
+        <img src="assets/bozkurt-robotik-logo.png" alt="Bozkurt Robotik logosu">
+        <span>BOZKURT ROBOTİK</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Ana menü">
+        <a href="#technology">Teknoloji</a>
+        <a href="#motor-control">Motor Kontrol</a>
+        <a href="#sensors">Sensörler</a>
+        <a href="#applications">Uygulamalar</a>
+        <a href="#about">Hakkımızda</a>
+        <a class="nav-cta" href="#contact">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid-overlay"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">INTELLIGENT MOTOR CONTROL & EMBEDDED SENSING</div>
+          <h1>Motor kontrolü,<br><span>kontrol karmaşıklığı olmadan.</span></h1>
+          <p class="hero-lead">
+            Bozkurt Robotik; motor seviyesindeki modelleme, sistem tanılama, kontrolcü tasarımı
+            ve ayar yükünü son kullanıcıdan soyutlayan yerli kontrol elektroniği geliştirir.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#motor-control">Motor Kontrol Platformu</a>
+            <a class="btn btn-secondary" href="#sensors">Sensör Ürün Ailesi</a>
+          </div>
+          <div class="hero-note">
+            <span class="status-dot"></span>
+            Brushed DC motor controller — Prototype V1 complete, revision & validation in progress
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Bozkurt kontrol katmanı görselleştirmesi">
+          <div class="signal-card user-card">
+            <span>HOST MCU / PLC / ROBOT COMPUTER</span>
+            <strong>Position · Velocity · Current Command</strong>
+          </div>
+          <div class="flow-line"></div>
+          <div class="intelligence-card">
+            <div class="card-kicker">BOZKURT INTELLIGENCE LAYER</div>
+            <h2>Characterize. Design. Control.</h2>
+            <div class="mini-pills">
+              <span>System ID</span><span>Control Design</span><span>Observers</span><span>Validation</span>
+            </div>
+          </div>
+          <div class="flow-line"></div>
+          <div class="signal-card motor-card">
+            <span>MOTOR + ENCODER</span>
+            <strong>Ready-to-use motion control</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="technology">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">THE PROBLEM</div>
+            <h2>Yüksek performanslı motor kontrolü hâlâ yoğun mühendislik zamanı gerektiriyor.</h2>
+          </div>
+          <p>
+            Geleneksel süreç; parametre kestirimi, matematiksel modelleme, kontrol mimarisi seçimi,
+            ayar, gerçek zamanlı test ve yeniden doğrulama adımlarını kullanıcıya bırakır.
+          </p>
+        </div>
+
+        <div class="workflow-compare">
+          <div class="workflow-card muted">
+            <div class="workflow-title">Traditional Development Workflow</div>
+            <div class="workflow-steps">
+              <span>Motor</span><i>→</i><span>Parameter Identification</span><i>→</i>
+              <span>Mathematical Model</span><i>→</i><span>Controller Design</span><i>→</i>
+              <span>Simulation</span><i>→</i><span>Real-Time Test</span><i>→</i>
+              <span>Retuning</span><i>→</i><span>Observer Design</span><i>→</i><span>Validation</span>
+            </div>
+          </div>
+          <div class="workflow-card accent">
+            <div class="workflow-title">Bozkurt Target Workflow</div>
+            <div class="workflow-steps">
+              <span>Connect Motor</span><i>→</i><span>Automatic Characterization</span><i>→</i>
+              <span>Automatic Control Design</span><i>→</i><span>Validation</span><i>→</i><span>Ready to Use</span>
+            </div>
+            <p class="workflow-note">Hedeflenen kullanıcı deneyimi: yaklaşık 15–20 dakikalık karakterizasyon ve kontrol oluşturma akışı.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="motor-control">
+      <div class="container">
+        <div class="section-heading inverse">
+          <div>
+            <div class="eyebrow red">CORE TECHNOLOGY</div>
+            <h2>Bozkurt Intelligent Motor Control Platform</h2>
+          </div>
+          <p>
+            Kullanıcı motora nasıl çalışacağını değil, ne yapmasını istediğini söyler.
+            Kontrol mühendisliği ayrıntıları Bozkurt kontrol katmanında yönetilir.
+          </p>
+        </div>
+
+        <div class="command-strip">
+          <div><small>POSITION</small><strong>“45° konuma git”</strong></div>
+          <div><small>VELOCITY</small><strong>“1200 RPM ile dön”</strong></div>
+          <div><small>CURRENT / TORQUE</small><strong>“Belirlenen akım seviyesini uygula”</strong></div>
+        </div>
+
+        <div class="tech-columns">
+          <div class="tech-card">
+            <div class="icon-box">01</div>
+            <h3>Control Modes</h3>
+            <p>Position Control<br>Velocity Control<br>Current Control</p>
+          </div>
+          <div class="tech-card">
+            <div class="icon-box">02</div>
+            <h3>Control Methods</h3>
+            <p>PID Family<br>LQR / LQI<br>MRAC</p>
+          </div>
+          <div class="tech-card">
+            <div class="icon-box">03</div>
+            <h3>Estimation & Robustness</h3>
+            <p>Disturbance Observer<br>Extended State Observer</p>
+          </div>
+        </div>
+
+        <div class="architecture">
+          <div class="arch-node">MOTOR + ENCODER</div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-node strong">AUTOMATIC CHARACTERIZATION</div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-node strong">SYSTEM IDENTIFICATION</div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-node strong">CONTROL DESIGN ENGINE</div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-node">OBSERVER / DISTURBANCE ESTIMATION</div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-node">VALIDATION</div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-node final">READY-TO-USE MOTOR CONTROLLER</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="software">
+      <div class="container">
+        <div class="split-grid">
+          <div>
+            <div class="eyebrow">PC SOFTWARE</div>
+            <h2>Donanımı, kontrol mühendisliğini ve doğrulamayı tek iş akışında birleştiren yazılım.</h2>
+            <p class="lead">
+              PC uygulaması; motor tanımlama, otomatik testler, parametre kestirimi,
+              kontrolcü oluşturma, telemetri ve performans analizini aynı ortamda toplamayı hedefler.
+            </p>
+            <div class="feature-list">
+              <span>Motor characterization</span>
+              <span>Controller generation</span>
+              <span>Real-time telemetry</span>
+              <span>Logging & diagnostics</span>
+              <span>Motor profile management</span>
+              <span>Performance evaluation</span>
+            </div>
+          </div>
+          <div class="software-mock">
+            <div class="mock-top">
+              <span>BOZKURT CONTROL STUDIO</span>
+              <span class="concept-badge">CONCEPT UI</span>
+            </div>
+            <div class="mock-body">
+              <div class="sidebar">
+                <span class="active">Overview</span><span>Identification</span><span>Control</span><span>Telemetry</span><span>Logs</span>
+              </div>
+              <div class="dash">
+                <div class="dash-row">
+                  <div class="metric"><small>Motor Profile</small><strong>DC-Prototype-01</strong></div>
+                  <div class="metric"><small>Mode</small><strong>Velocity</strong></div>
+                </div>
+                <div class="chart">
+                  <div class="chart-line"></div>
+                  <div class="chart-grid"></div>
+                </div>
+                <div class="dash-row">
+                  <div class="metric"><small>Identification</small><strong>Ready</strong></div>
+                  <div class="metric"><small>Controller</small><strong>Generated</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="sensors">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">SECOND PRODUCT LINE</div>
+            <h2>Bozkurt Sensor Modules</h2>
+          </div>
+          <p>
+            Sensör modülleri; erken gelir, üretim kabiliyeti ve ileride motor kontrol ekosistemini
+            tamamlayacak donanım yetkinliği için geliştirilen destekleyici ürün hattıdır.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-topline">
+              <span class="tag">STANDARD PERFORMANCE TIER</span>
+              <span class="state">Commercialization preparation</span>
+            </div>
+            <div class="product-placeholder">
+              <div class="placeholder-inner">
+                <strong>Ürün fotoğrafı</strong>
+                <span>Profesyonel çekim sonrası eklenecek</span>
+              </div>
+            </div>
+            <h3>Bozkurt 9-DoF IMU</h3>
+            <p class="product-sub">Accessible motion sensing module</p>
+            <div class="sensor-eq">
+              <span><strong>LSM6DSOXTR</strong><small>Accelerometer + Gyroscope</small></span>
+              <b>+</b>
+              <span><strong>MMC5603NJ</strong><small>3-Axis Magnetometer</small></span>
+              <b>=</b>
+              <span class="result"><strong>9-DoF IMU</strong><small>General robotics / embedded / education / R&D</small></span>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-topline">
+              <span class="tag dark-tag">ADVANCED PERFORMANCE TIER</span>
+              <span class="state">R&D / Under Development</span>
+            </div>
+            <div class="product-placeholder blueprint">
+              <div class="placeholder-inner">
+                <strong>Architecture Concept</strong>
+                <span>Gerçek PCB renderı henüz kullanılmıyor</span>
+              </div>
+            </div>
+            <h3>Bozkurt High-Performance 9-DoF IMU</h3>
+            <p class="product-sub">Advanced motion sensing module</p>
+            <div class="sensor-eq">
+              <span><strong>ICM-42688</strong><small>Accelerometer + Gyroscope</small></span>
+              <b>+</b>
+              <span><strong>MMC5983MA</strong><small>3-Axis Magnetometer</small></span>
+              <b>=</b>
+              <span class="result"><strong>High-Performance 9-DoF IMU</strong><small>Robotics / navigation research / advanced mechatronics / R&D</small></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="applications">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">POTENTIAL APPLICATION AREAS</div>
+            <h2>Robotikten endüstriyel otomasyona.</h2>
+          </div>
+          <p>Ürün ailesi; hareket kontrolü ve gömülü algılama gerektiren geniş bir mühendislik uygulama alanını hedefler.</p>
+        </div>
+        <div class="applications-grid">
+          <div class="app-card"><strong>Robotik Sistemler</strong><span>Mobil robotlar, AGV, robot kollar</span></div>
+          <div class="app-card"><strong>Endüstriyel Otomasyon</strong><span>Mekatronik ve özel makine sistemleri</span></div>
+          <div class="app-card"><strong>Ar-Ge & Laboratuvarlar</strong><span>Test sistemleri, araştırma ve eğitim platformları</span></div>
+          <div class="app-card"><strong>Embedded Systems</strong><span>Kontrol ve motion sensing odaklı gömülü uygulamalar</span></div>
+          <div class="app-card"><strong>Navigation Research</strong><span>İleri seviye IMU için hedeflenen araştırma alanı</span></div>
+          <div class="app-card"><strong>Savunma & Havacılık Alt Sistemleri</strong><span>Potansiyel uygulama alanı; qualification iddiası değildir</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="about">
+      <div class="container">
+        <div class="section-heading inverse">
+          <div>
+            <div class="eyebrow red">ABOUT BOZKURT ROBOTİK</div>
+            <h2>Kontrol mühendisliğini donanım, gömülü yazılım ve kullanıcı yazılımıyla ürünleştiren deep-tech girişimi.</h2>
+          </div>
+          <p>
+            Ana teknoloji odağı motor kontrolüdür. Sensör modülleri, bu ana odağı finansal ve operasyonel olarak destekleyen ikinci ürün hattıdır.
+          </p>
+        </div>
+
+        <div class="strategy-map">
+          <div class="strategy-core">
+            <small>CORE TECHNOLOGY</small>
+            <strong>Intelligent Motor Control</strong>
+            <div class="strategy-split"><span>Hardware Platform</span><span>Control Software</span></div>
+          </div>
+          <div class="strategy-side">
+            <small>SECOND PRODUCT LINE</small>
+            <strong>Sensor Modules</strong>
+            <div class="strategy-list"><span>Early Revenue</span><span>Manufacturing Experience</span><span>Distribution Network</span><span>Future Ecosystem Components</span></div>
+          </div>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <span class="role">Co-Founder · Control Systems & Software</span>
+            <h3>Muhammed Ali Türk</h3>
+            <p>Control algorithms · System identification · Motor modeling · Embedded control logic · PC software · Algorithm validation</p>
+            <small>Yıldız Teknik Üniversitesi — Kontrol ve Otomasyon Mühendisliği</small>
+          </article>
+          <article class="team-card">
+            <span class="role">Co-Founder · Electronics & PCB</span>
+            <h3>Mehmet Can Yıldız</h3>
+            <p>PCB design · Electronics · Power electronics · Sensor hardware · Hardware testing · Production-oriented electronic design</p>
+            <small>Multidisciplinary engineering capability</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section status-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">PRODUCT DEVELOPMENT STATUS</div>
+            <h2>Brushed DC controller: prototype complete, productization in progress.</h2>
+          </div>
+          <p>Durum bilgileri mevcut geliştirme aşamasını yansıtır; satışa hazır seri ürün performansı iddiası değildir.</p>
+        </div>
+        <div class="roadmap">
+          <div class="road complete"><span></span><strong>Concept</strong><small>Complete</small></div>
+          <div class="road complete"><span></span><strong>Architecture</strong><small>Complete</small></div>
+          <div class="road complete"><span></span><strong>Prototype V1</strong><small>Complete</small></div>
+          <div class="road progress"><span></span><strong>Hardware Revision</strong><small>In Progress</small></div>
+          <div class="road progress"><span></span><strong>Control Software</strong><small>In Progress</small></div>
+          <div class="road progress"><span></span><strong>Validation</strong><small>In Progress</small></div>
+          <div class="road target"><span></span><strong>Sellable V1</strong><small>Target ~6 Weeks</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="eyebrow">CONTACT</div>
+          <h2>Motor kontrolü veya sensör modülleri için görüşelim.</h2>
+          <p>Kurumsal satış, pilot uygulama, dağıtım ve teknik iş birlikleri için iletişime geçebilirsiniz.</p>
+        </div>
+        <div class="contact-card">
+          <div><small>Website</small><strong>bozkurtrobotik.com</strong></div>
+          <div><small>E-mail</small><strong>Kurumsal e-posta kurulumu tamamlanınca eklenecek</strong></div>
+          <div><small>Company</small><strong>Bozkurt Robotik</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div class="footer-brand">
+        <img src="assets/bozkurt-robotik-logo.png" alt="">
+        <span>BOZKURT ROBOTİK</span>
+      </div>
+      <div>Making advanced motor control accessible.</div>
+      <div>© <span id="year"></span> Bozkurt Robotik</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
