@@ -1,4 +1,4 @@
-# Bozkurt Robotik — Web Sitesi V2
+# Bozkurt Robotik — Web Sitesi V3.2
 
 Türkçe ve İngilizce, hareketli kurumsal ürün tanıtım sitesi.
 Statik HTML / CSS / JavaScript. Paket yöneticisi, derleme veya sunucu kodu gerektirmez.
@@ -110,3 +110,11 @@ https://docs.github.com/en/repositories/working-with-files/managing-files/adding
 ## V3.1 correction
 - Mehmet Can Yıldız education corrected to Fatih Sultan Mehmet Vakıf University, Electrical and Electronics Engineering.
 - Professional status updated to indicate he is a graduate and currently works as an engineer.
+
+
+## V3.2 team copy refinement
+- Mehmet Can Yıldız profile copy shortened to match the concise capability-card style used across the team section.
+- Turkish copy: “Güç elektroniği, sensör donanımı, PCB tasarımı ve üretime yönelik elektronik geliştirme.”
+- Education retained separately as Fatih Sultan Mehmet Vakıf Üniversitesi, Elektrik-Elektronik Mühendisliği.
+- English team copy updated to the same concise structure.
+- Removed redundant CV-style wording such as “currently works professionally as an engineer” and “graduate” from the visible profile copy.
