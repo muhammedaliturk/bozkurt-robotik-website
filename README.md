@@ -98,3 +98,15 @@ This is a static presentation website, not an e-commerce or email backend.
 Reference documentation:
 https://developers.cloudflare.com/pages/configuration/git-integration/github-integration/
 https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository
+
+
+## V3 refinements
+- Responsive overlap prevention across desktop/tablet/mobile breakpoints.
+- Team section redesigned as equal capability cards.
+- Mehmet Can Yıldız profile updated to reflect graduation and current engineering career.
+- Additional layout polish for hero, software tabs, products and contact area.
+
+
+## V3.1 correction
+- Mehmet Can Yıldız education corrected to Fatih Sultan Mehmet Vakıf University, Electrical and Electronics Engineering.
+- Professional status updated to indicate he is a graduate and currently works as an engineer.
