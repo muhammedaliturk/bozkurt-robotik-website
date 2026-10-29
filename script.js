@@ -52,6 +52,83 @@
   });
   applyMotion();
 
+
+  // V3.3 — Shared standard-IMU product render and pointer tilt.
+  // Turkish HTML includes this markup statically; the English page receives
+  // the same art here without modifying the rest of its product copy.
+  function initializeImuVisual() {
+    const art = $('.product-1 .product-art');
+    if (!art) return;
+    art.classList.add('product-art-render');
+    if (!$('.imu-visual', art)) {
+      const prefix = language === 'en' ? '../' : '';
+      const image = document.createElement('div');
+      image.className = 'imu-visual';
+      image.setAttribute('role', 'img');
+      image.setAttribute('aria-label', language === 'en'
+        ? '3D product render of the Bozkurt Robotik standard 9-DoF IMU board'
+        : "Bozkurt Robotik standart 9 serbestlik dereceli IMU modülünün üç boyutlu ürün render'ı");
+      image.innerHTML = `
+        <span class="imu-glow" aria-hidden="true"></span>
+        <span class="imu-orbit imu-orbit-1" aria-hidden="true"></span>
+        <span class="imu-orbit imu-orbit-2" aria-hidden="true"></span>
+        <span class="imu-shadow" aria-hidden="true"></span>
+        <span class="imu-tilt"><span class="imu-float"><picture>
+          <source srcset="${prefix}assets/imu-standard-render.webp" type="image/webp">
+          <img class="imu-board" src="${prefix}assets/imu-standard-render.png" alt="" width="510" height="775" loading="lazy" decoding="async">
+        </picture></span></span>
+        <span class="imu-spark imu-spark-1" aria-hidden="true"></span>
+        <span class="imu-spark imu-spark-2" aria-hidden="true"></span>`;
+      art.replaceChildren(image);
+      const caption = document.createElement('span');
+      caption.className = 'art-caption';
+      caption.textContent = language === 'en' ? '3D product render · Not a photograph'
+        : "Ürünün 3B render'ı · Fotoğraf değildir";
+      art.appendChild(caption);
+    }
+    const stage = $('.imu-visual', art);
+    if (!stage || !window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+    const reset = () => {
+      stage.style.setProperty('--imu-rx','0deg');
+      stage.style.setProperty('--imu-ry','0deg');
+    };
+    stage.addEventListener('pointermove', e => {
+      if (paused || e.pointerType !== 'mouse') return;
+      const rect = stage.getBoundingClientRect();
+      const dx = (e.clientX - rect.left) / rect.width - .5;
+      const dy = (e.clientY - rect.top) / rect.height - .5;
+      stage.style.setProperty('--imu-rx', `${Math.max(-5, Math.min(5, -dy*10)).toFixed(2)}deg`);
+      stage.style.setProperty('--imu-ry', `${Math.max(-8, Math.min(8, dx*16)).toFixed(2)}deg`);
+    }, {passive:true});
+    stage.addEventListener('pointerleave', reset, {passive:true});
+    $('.motion-button')?.addEventListener('click', reset);
+  }
+  initializeImuVisual();
+
+
+  // V3.5 — Motor PCB render is part of HTML (also works without JavaScript).
+  // JavaScript is only needed for the optional, subtle mouse-angle response.
+  function initializeMotorVisual() {
+    const visual = $('.product-0 .motor-product-visual');
+    if (!visual) return;
+    if (!window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+    const reset = () => {
+      visual.style.setProperty('--motor-tilt-x', '0deg');
+      visual.style.setProperty('--motor-tilt-y', '0deg');
+    };
+    visual.addEventListener('pointermove', (event) => {
+      if (paused || event.pointerType !== 'mouse') return;
+      const bounds = visual.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - .5;
+      const y = (event.clientY - bounds.top) / bounds.height - .5;
+      visual.style.setProperty('--motor-tilt-x', `${Math.max(-4,Math.min(4,-y*8)).toFixed(2)}deg`);
+      visual.style.setProperty('--motor-tilt-y', `${Math.max(-7,Math.min(7,x*14)).toFixed(2)}deg`);
+    }, {passive:true});
+    visual.addEventListener('pointerleave',reset,{passive:true});
+    $('.motion-button')?.addEventListener('click',reset);
+  }
+  initializeMotorVisual();
+
   // Mobile navigation. Menu, Escape and all anchor links use the same close path.
   const menuButton = $('.menu-toggle');
   const menu = $('#mobile-nav');
