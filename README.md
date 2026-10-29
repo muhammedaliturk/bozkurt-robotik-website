@@ -1,40 +1,36 @@
-# Bozkurt Robotik — Tam site paketi V3.5
+# Bozkurt Robotik — V3.6 (masaüstü + yayın önbelleği düzeltmesi)
 
-Bu ZIP, mevcut sitenin **tamamını** içerir ve depodaki önceki site dosyalarının yerini alabilir. Modern derleyici, paket yöneticisi veya harici JavaScript/CSS bağımlılığı yoktur.
+Bu ZIP, **tam sitenin tüm dosyalarını** içerir. `/` ve `/en/` sayfaları, ürün kartları, logolar, 404 sayfaları, animasyonlar ve bütün statik kaynaklar dahildir.
 
-## Ürün görselleri — V3.5
+## Yapılan düzeltmeler
 
-- Akıllı DC Motor Kontrolcü: gönderilen PCB render'ı `assets/motor-controller-render.png` ve optimize WebP sürümü. Arka planı şeffaflaştırıldı, kartın animasyonu etkinleştirildi. Görsel HTML'ye doğrudan bağlandı; JavaScript kapalı olsa bile gösterilir.
-- Standart 9 DoF IMU: özgün render `assets/imu-standard-render.png` ve WebP sürümü. Görsel kartın içindeki ayrılmış alanla sınırlandırıldı; etiket, başlık ve ürün açıklamalarının üzerine taşamaz.
-- Her iki üründe yavaş süzülme, hafif ışık ve gölge, masaüstünde fare hareketiyle sınırlı perspektif animasyonu bulunur.
-- Animasyonları durdur/oynat ve işletim sistemi 'hareketi azalt' tercihi desteklenir.
-- Türkçe ve İngilizce sayfalar eşdeğerdir.
+- Yeni HTML, eski CSS/JS ile karışmasın diye içerik hash'li dosyalar kullanır: `styles-918c1de88797.css` ve `script-558e20d3e2f1.js`.
+- `styles.css` ve `script.js` düzenlenebilir kaynak kopyaları olarak ayrıca korunur; sayfanın kullandığı dosyalar üstteki hash'li sürümlerdir. İleride kodu değiştirirsen yeni hash'li dosya oluşturup HTML bağlantısını da yenile.
+- Motor kontrolcü ve standart IMU render görselleri yeni dosya adlarıyla bağlandı (`-v36`), böylece eski görsel önbelleği etkisiz kalır.
+- Cloudflare `_headers` içindeki `/assets/*` için **24 saat önbellekleme** kuralı kaldırıldı. Cloudflare Pages'in otomatik revalidation davranışı kullanılacak.
+- Masaüstünde özellikle 961–1240 piksel aralığında hero ve ürün kartlarının taşma/yerleşim kuralları güçlendirildi; 961–1100 px aralığında birinci ürün kartı iki sütuna yayılır.
+- Mobil düzen ve mevcut görsel animasyonları korunmuştur.
 
-## Dosya yapısı
+## Tam güncelleme — GitHub ve Cloudflare Pages
 
-- `index.html` — Türkçe ana sayfa
-- `en/index.html` — İngilizce ana sayfa
-- `404.html` ve `en/404.html` — hata sayfaları
-- `styles.css` — responsive tasarım ve animasyonlar
-- `script.js` — etkileşimler
-- `assets/` — Bozkurt logosu/amblem/favicon ve iki ürünün PNG/WebP render görselleri
-- `_headers`, `robots.txt`, `sitemap.xml` — site yapılandırması
+1. Mevcut GitHub `main` sürümünün bir yedeğini al.
+2. ZIP'i **çıkar**; ZIP dosyasının kendisini GitHub'a yükleme.
+3. Eski site dosyalarını kaldıracaksan arşivdeki **tüm dosyaları ve klasörleri** repo köküne yükle. `assets/` ve `en/` klasörlerinin tam yüklendiğini kontrol et.
+4. `main` dalına commit et; Cloudflare Pages dağıtımının **Success** olduğunu doğrula.
+5. Yeni bir proje veya alan adı açma. Cloudflare ayarları: Framework None; build command boş; output directory `/`; branch `main`.
+6. `https://bozkurtrobotik.com/styles-918c1de88797.css` ve `https://bozkurtrobotik.com/script-558e20d3e2f1.js` adreslerinin 200 döndüğünü, içeriğin CSS/JavaScript olduğunu kontrol et.
+7. Siteyi bilgisayarda Ctrl+Shift+R ile yenile ve gizli pencerede test et. Gerekirse Cloudflare Caching > Configuration > Purge Everything uygulamasını **yalnızca hâlâ eski sürüm geliyorsa** dene.
 
-## Mevcut GitHub deposunda yayınlama
+**Önemli:** GitHub'a yalnızca `index.html` yükleyip CSS/JS dosyalarını eksik bırakmak sitenin biçimini bozar. Tek commit içinde bütün arşiv içeriği bulunmalıdır.
 
-1. Geri dönüş imkanı için mevcut `main` commit'ini veya ZIP yedeğini saklayın.
-2. Arşivi çıkarın. İçeriği (dış klasörü değil) mevcut `muhammedaliturk/bozkurt-robotik-website` deposunun köküne yükleyin.
-3. `index.html`, `styles.css`, `script.js`, `en/`, `assets/` dahil paket içindeki dosyaların kökte kalmasına dikkat edin.
-4. `main` dalına commit edin. Cloudflare Pages aynı projeyi yeniden yayımlar.
-5. `/` ve `/en/` sayfalarını, standart IMU ve motor kartlarını kontrol edin. Gerekirse Ctrl+F5 ile yenileyin.
+## Dosya düzeni
 
-Yeni repo, yeni Cloudflare projesi, DNS, SSL veya e-posta ayarı oluşturmayın.
-Cloudflare Pages: branch `main`; framework preset `None`; build command boş; output directory `/`.
+- `index.html`, `en/index.html`, `404.html`, `en/404.html`
+- `styles-918c1de88797.css` ve `script-558e20d3e2f1.js` (**aktif** CSS/JavaScript)
+- `styles.css`, `script.js` (aynı içeriklerin düzenlenebilir kök kopyaları)
+- `assets/` (tüm amblem ve render görselleri)
+- `robots.txt`, `sitemap.xml`, `_headers`
 
-## Testler ve notlar
+## Doğrulama kapsamı
 
-- Her iki HTML'de ürün görsellerinin `src/srcset` adresleri dosyalarda bulunur.
-- Görsel alanı ile metin ayrı HTML/CSS grid satırlarında tutulur.
-- Ürün detay pencereleri, diğer sayfalar ve bağlantılar korunmuştur.
-- Dosya bütünlüğü ve sözdizimi kontrol edildi; canlı domaine gönderim yapılmadı.
-- Marka amblemi ve logolar önceki tam site paketinden korundu.
+Bu dosyalar için bütünlük, görsel/dosya bağlantıları, iki dilde CSS/JS URL'leri ve JavaScript/CSS sözdizimi **statik olarak** kontrol edilir. Canlı tarayıcı ekran görüntüsü veya Cloudflare dağıtımı bu ortamdan doğrulanamadı; canlıda her sorunun çözüldüğü garanti edilmez.

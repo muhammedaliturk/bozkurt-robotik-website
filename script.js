@@ -74,8 +74,8 @@
         <span class="imu-orbit imu-orbit-2" aria-hidden="true"></span>
         <span class="imu-shadow" aria-hidden="true"></span>
         <span class="imu-tilt"><span class="imu-float"><picture>
-          <source srcset="${prefix}assets/imu-standard-render.webp" type="image/webp">
-          <img class="imu-board" src="${prefix}assets/imu-standard-render.png" alt="" width="510" height="775" loading="lazy" decoding="async">
+          <source srcset="${prefix}assets/imu-standard-render-v36.webp" type="image/webp">
+          <img class="imu-board" src="${prefix}assets/imu-standard-render-v36.png" alt="" width="510" height="775" loading="lazy" decoding="async">
         </picture></span></span>
         <span class="imu-spark imu-spark-1" aria-hidden="true"></span>
         <span class="imu-spark imu-spark-2" aria-hidden="true"></span>`;
