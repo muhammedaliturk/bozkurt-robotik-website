@@ -34,6 +34,13 @@
 .brx-spec-note { color: var(--muted); max-width: 76ch; line-height: 1.65; }
 
 @media (max-width: 700px) {
-  .brx-hero .wrap { grid-template-columns: 1fr; }
+  .brx-hero { padding-block: 28px 52px; }
+  .brx-hero .wrap { grid-template-columns: 1fr; gap: 20px; }
+  .brx-hero-copy { display: contents; }
+  .brx-hero-intro { grid-row: 1; }
+  .brx-hero .brx-back { margin-bottom: 10px; }
+  .brx-hero .brx-lead { margin-bottom: 0; }
+  .brx-hero .brx-art { grid-row: 2; padding: 12px; }
+  .brx-hero-details { grid-row: 3; }
   .brx-spec-grid { grid-template-columns: 1fr; }
 }
