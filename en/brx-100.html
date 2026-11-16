@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BRX-100 9-axis IMU | Bozkurt Robotik</title>
+<meta name="description" content="The BRX-100 combines a three-axis accelerometer, gyroscope, and magnetometer on one board for robotics, motion logging, and embedded measurement.">
+<meta name="theme-color" content="#f6f7f5">
+<link rel="canonical" href="https://bozkurtrobotik.com/en/brx-100.html">
+<link rel="alternate" hreflang="tr" href="https://bozkurtrobotik.com/brx-100.html">
+<link rel="alternate" hreflang="en" href="https://bozkurtrobotik.com/en/brx-100.html">
+<link rel="icon" href="../assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="../styles-1952df4e5c37.css">
+<link rel="stylesheet" href="../brx-100.css">
+</head>
+<body>
+<a class="skip-link" href="#main">İçeriğe geç</a>
+<header class="site-header">
+ <div class="header-inner wrap">
+  <a href="index.html#top" class="brand" aria-label="Bozkurt Robotik"><img src="../assets/bozkurt-amblem.webp" width="52" height="56" alt=""><span>BOZKURT<strong>ROBOTİK</strong></span></a>
+  <nav class="desktop-nav" aria-label="Main menu"><a href="index.html#products">Products</a><a href="#specifications">Specifications</a><a href="#imu-resources">Datasheet and libraries</a></nav>
+  <div class="header-tools">
+   <button class="motion-button" type="button" aria-label="Pause animations" title="Pause animations" aria-pressed="false"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><span class="sr-only">Pause animations</span></button>
+   <div class="language-switch" aria-label="Site language"><a href="../brx-100.html" lang="tr" hreflang="tr" class="lang-link" aria-label="Turkish">TR</a><span aria-hidden="true">/</span><a href="brx-100.html" lang="en" hreflang="en" class="lang-link selected" aria-current="page" aria-label="English">EN</a></div>
+   <a class="contact-nav" href="#contact">Contact<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+   <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
+  </div>
+ </div>
+ <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden><a href="index.html#products">Products</a><a href="#specifications">Specifications</a><a href="#imu-resources">Datasheet and libraries</a><a href="index.html#contact">Contact</a></nav>
+ <div class="reading-progress" aria-hidden="true"></div>
+</header>
+<main id="main">
+ <section class="brx-hero" id="top" aria-labelledby="product-title">
+  <div class="wrap">
+   <div>
+    <a class="brx-back" href="index.html#products">← All products</a>
+    <p class="eyebrow">MID-RANGE SENSOR MODULE</p>
+    <h1 id="product-title">BRX-100</h1>
+    <p class="brx-lead">Mid-range inertial and magnetic sensor module</p>
+    <p class="brx-description">The BRX-100 combines a three-axis accelerometer, gyroscope, and magnetometer on one board for robotics, motion logging, and embedded measurement.</p>
+    <span class="status-chip"><i></i>Preparing for commercialization</span>
+   </div>
+   <figure class="brx-art">
+    <picture>
+     <source srcset="../assets/imu-standard-render-v36.webp" type="image/webp">
+     <img src="../assets/imu-standard-render-v36.png" alt="BRX-100" width="510" height="775">
+    </picture>
+    <figcaption>3D product render · Not a photograph</figcaption>
+   </figure>
+  </div>
+ </section>
+ <section class="section brx-specs" id="specifications" aria-labelledby="spec-title">
+  <div class="wrap">
+   <h2 id="spec-title">Specifications</h2>
+   <dl>
+   <div><dt>Accelerometer and gyroscope</dt><dd>LSM6DSOXTR · 3-axis acceleration + 3-axis angular rate</dd></div>
+   <div><dt>Magnetometer</dt><dd>MMC5603NJ · 3-axis magnetic field</dd></div>
+   <div><dt>Accelerometer range</dt><dd>±2 / ±4 / ±8 / ±16 g</dd></div>
+   <div><dt>Gyroscope range</dt><dd>±125 / ±250 / ±500 / ±1000 / ±2000 °/s</dd></div>
+   <div><dt>Magnetometer range</dt><dd>±30 gauss (±3000 µT)</dd></div>
+   <div><dt>Board dimensions</dt><dd>11.75 × 18.75 mm</dd></div>
+   <div><dt>J1 connector</dt><dd>7 pins, 2.54 mm pitch · VIN, GND, SCL, SDA, SDO/SA0, CS, INT2</dd></div>
+   <div><dt>Onboard regulator</dt><dd>XC6220B331MR · nominal 3.3 V output</dd></div>
+    <div><dt>Supply voltage (VIN)</dt><dd>3.3–5 V DC · J1 pin 1</dd></div>
+  </dl>
+   <p class="brx-spec-note">Measurement ranges are sensor IC specifications. Use 3.3 V-compatible logic on signal pins. Acceleration and angular-rate measurements were verified on an Arduino Mega. Board-level magnetometer and simultaneous nine-axis operation are pending validation.</p>
+  </div>
+ </section>
+ <section class="imu-resources section" id="imu-resources" aria-labelledby="imu-resource-title">
+ <div class="wrap">
+  <div class="imu-resource-head" data-reveal><div><p class="eyebrow">DOCUMENTATION & DEVELOPER RESOURCES</p><h2 id="imu-resource-title">Datasheet and libraries</h2></div><p>Download the BRX-100 datasheet and platform-specific driver packages.</p></div>
+  <div class="resource-document" data-reveal>
+    <div class="resource-pdf-icon" aria-hidden="true"><svg viewBox="0 0 48 56" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 2h19l11 11v41H10a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3Z"/><path d="M28 3v12h12M13 30h21M13 36h21M13 42h15"/></svg><span>PDF</span></div>
+    <div class="resource-pdf-copy"><p class="eyebrow">TECHNICAL DOCUMENT</p><h3>BRX-100 datasheet</h3><p>PDF · English + Turkish · Rev B · The document uses the previous model name (BR-IMU-M1).</p></div>
+    <div class="resource-pdf-actions"><a href="../docs/BR-IMU-M1_Datasheet_Bilingual_RevB.pdf" target="_blank" rel="noopener" class="resource-pdf-view">View PDF</a><a href="../docs/BR-IMU-M1_Datasheet_Bilingual_RevB.pdf" download class="resource-pdf-download">Download PDF<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v14m-5-5 5 5 5-5M5 21h14"/></svg></a></div>
+  </div>
+  <div class="resource-library-title" data-reveal><div><p class="eyebrow">SOFTWARE LIBRARIES</p><h3>Choose your platform</h3></div><p>Teensy, ESP32 and STM32 downloads are integration previews. Hardware evidence exists only for the original six-axis Arduino Mega path.</p></div>
+  <div class="resource-platform-grid"><article class="resource-platform">
+   <div class="resource-platform-top"><span class="resource-platform-name">Arduino</span><span class="resource-version">v0.2.1</span></div>
+   <p>Arduino AVR · Wire</p><span class="resource-status">Original Arduino source</span>
+   <a class="resource-download" href="../downloads/IMU_ZR_Arduino_v0.2.1.zip" download>Download ZIP<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v14m-5-5 5 5 5-5M5 21h14"/></svg></a>
+  </article><article class="resource-platform">
+   <div class="resource-platform-top"><span class="resource-platform-name">Teensy</span><span class="resource-version">Preview / v0.1</span></div>
+   <p>Teensyduino 4.x · Arduino/Wire based</p><span class="resource-status">Integration preview</span>
+   <a class="resource-download" href="../downloads/IMU_ZR_Teensy_ArduinoCore_Preview_v0.1.zip" download>Download ZIP<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v14m-5-5 5 5 5-5M5 21h14"/></svg></a>
+  </article><article class="resource-platform">
+   <div class="resource-platform-top"><span class="resource-platform-name">ESP32</span><span class="resource-version">Preview / v0.1</span></div>
+   <p>ESP32 Arduino core · I²C example</p><span class="resource-status">Integration preview</span>
+   <a class="resource-download" href="../downloads/IMU_ZR_ESP32_ArduinoCore_Preview_v0.1.zip" download>Download ZIP<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v14m-5-5 5 5 5-5M5 21h14"/></svg></a>
+  </article><article class="resource-platform">
+   <div class="resource-platform-top"><span class="resource-platform-name">STM32</span><span class="resource-version">Preview / v0.1</span></div>
+   <p>STM32Cube HAL · 6-axis driver</p><span class="resource-status">Integration preview</span>
+   <a class="resource-alt-download" href="../downloads/IMU_ZR_STM32_ArduinoCore_Preview_v0.1.zip" download>Alternative STM32duino (Arduino core) ZIP <span aria-hidden="true">↓</span></a>
+   <a class="resource-download" href="../downloads/IMU_ZR_STM32_HAL_Preview_v0.1.zip" download>Download ZIP<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v14m-5-5 5 5 5-5M5 21h14"/></svg></a>
+  </article></div>
+  <p class="resource-warning" data-reveal>Important: The magnetometer has not yet been validated on the board. Six-axis (accelerometer + gyro) is the supported starting point; nine-axis use needs further hardware testing. The datasheet is preliminary.</p>
+ </div>
+</section>
+</main>
+<footer><div class="wrap footer-inner"><div><strong>BOZKURT ROBOTİK</strong><p>Intelligent motor control and embedded sensing.</p></div><div class="footer-right"><a href="#top">Back to top ↑</a><p>© <span data-year>2026</span> Bozkurt Robotik. All rights reserved.</p></div></div></footer>
+<script src="../script-558e20d3e2f1.js" defer></script>
+</body>
+</html>

@@ -673,3 +673,53 @@ body.motion-paused .motor-product-beacon,body.motion-paused .motor-product-scan 
 .product-0 .product-art-render .art-caption, .product-1 .product-art-render .art-caption {
   position:relative;white-space:normal;overflow-wrap:normal;
 }
+
+
+/* ---------------------------------------------------------------
+   V3.7 — BR-IMU-M1 datasheet and developer downloads
+   --------------------------------------------------------------- */
+.resource-shortcut{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:8px 0 5px;padding:9px 0;color:#415d70;font-size:11px;font-weight:650;line-height:1.45;transition:color .2s}
+.resource-shortcut:hover{color:var(--red)}
+.resource-shortcut span{font-size:15px;line-height:1}
+.imu-resources{background:#f7f9fa;border-top:1px solid #e1e7ea;border-bottom:1px solid #dfe7eb;scroll-margin-top:100px}
+.imu-resource-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:end;gap:52px;margin-bottom:38px}
+.imu-resource-head h2{margin:0;max-width:660px;line-height:1.16}
+.imu-resource-head h2 span{color:var(--red)}
+.imu-resource-head>p{max-width:500px;margin:0 0 4px;font-size:14px;line-height:1.85;color:var(--muted)}
+.resource-document{display:flex;align-items:center;gap:23px;background:#fff;border:1px solid #d6e0e5;border-radius:9px;padding:24px 27px;box-shadow:0 16px 34px #12304208}
+.resource-pdf-icon{flex:0 0 71px;width:71px;height:76px;display:flex;align-items:center;justify-content:center;position:relative;color:#40586b}
+.resource-pdf-icon svg{width:48px;height:56px}
+.resource-pdf-icon span{position:absolute;bottom:20px;left:18px;font-weight:800;font-size:9px;color:var(--red);letter-spacing:.07em;background:#fff}
+.resource-pdf-copy{flex:1;min-width:0}
+.resource-pdf-copy .eyebrow{margin-bottom:5px;font-size:9px}
+.resource-pdf-copy h3{font-size:clamp(18px,2vw,24px);margin:0 0 6px}
+.resource-pdf-copy>p:last-child{font-size:11px;color:var(--muted);line-height:1.5;margin:0}
+.resource-pdf-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.resource-pdf-actions a{display:inline-flex;justify-content:center;align-items:center;gap:8px;border-radius:4px;min-height:41px;padding:10px 14px;font-size:11px;font-weight:700;white-space:nowrap}
+.resource-pdf-view{border:1px solid #d2dde3;background:#fff}
+.resource-pdf-view:hover{border-color:var(--red);color:var(--red)}
+.resource-pdf-download{background:var(--ink);color:#fff}
+.resource-pdf-download:hover{background:var(--red)}
+.resource-pdf-download .icon{width:16px;height:16px}
+.resource-library-title{display:grid;grid-template-columns:1fr minmax(0,1fr);align-items:end;gap:35px;margin:57px 0 23px}
+.resource-library-title .eyebrow{margin-bottom:7px;font-size:9px}
+.resource-library-title h3{font-size:clamp(24px,2.7vw,34px);margin:0}
+.resource-library-title>p{font-size:11px;line-height:1.75;color:var(--muted);max-width:540px;margin:0}
+.resource-platform-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.resource-platform{min-width:0;display:flex;flex-direction:column;align-items:stretch;min-height:212px;padding:20px 19px;border:1px solid #dbe4e9;border-radius:7px;background:#fff;transition:transform .3s var(--ease),border-color .2s,box-shadow .3s}
+.resource-platform:hover{transform:translateY(-4px);border-color:#a8bcc7;box-shadow:0 12px 30px #0e283a12}
+.resource-platform-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:5px}
+.resource-platform-name{font-size:20px;font-weight:650;letter-spacing:-.035em;line-height:1.2}
+.resource-version{font:9px Consolas,monospace;color:#73858f;letter-spacing:-.02em}
+.resource-platform p{margin:12px 0 6px;font-size:11px;color:var(--muted);line-height:1.6;min-height:37px}
+.resource-status{display:block;font-size:9px;color:#7d8b94;line-height:1.5;margin-bottom:18px}
+.resource-download{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding:11px 0 2px;border-top:1px solid #e0e6e8;font-size:11px;font-weight:700;color:var(--ink)}
+.resource-download:hover{color:var(--red)}
+.resource-download .icon{width:18px;height:18px}
+.resource-warning{font-size:11px;color:#5c7080;line-height:1.75;margin:24px 0 0;border-left:2px solid var(--red);padding:5px 0 5px 15px;max-width:1000px}
+@media (max-width:1120px){.resource-platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.resource-document{flex-wrap:wrap}.resource-pdf-actions{margin-left:auto}}
+@media (max-width:700px){.imu-resource-head{grid-template-columns:1fr;gap:17px;margin-bottom:23px}.imu-resource-head>p{font-size:12px}.resource-document{padding:20px;gap:13px;align-items:center}.resource-pdf-icon{flex-basis:54px;width:54px;height:58px}.resource-pdf-icon svg{height:50px;width:42px}.resource-pdf-icon span{bottom:12px;left:12px}.resource-pdf-actions{width:100%;justify-content:stretch;margin:14px 0 0}.resource-pdf-actions a{flex:1 1 50%;white-space:normal;line-height:1.4}.resource-library-title{grid-template-columns:1fr;gap:12px;margin-top:39px}.resource-platform-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.resource-platform{padding:16px 14px;min-height:218px}.resource-platform-name{font-size:18px}.resource-version{font-size:8px}.resource-platform p{font-size:10px}}
+@media (max-width:430px){.resource-platform-grid{grid-template-columns:1fr}.resource-platform{min-height:180px}.resource-platform p{min-height:0}}
+
+.resource-alt-download{font-size:10px;line-height:1.5;color:#536d7c;padding:3px 0 10px;text-decoration:underline;text-decoration-color:#a8bac4;text-underline-offset:3px}
+.resource-alt-download:hover{color:var(--red);text-decoration-color:var(--red)}

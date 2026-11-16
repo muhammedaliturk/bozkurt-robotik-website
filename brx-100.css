@@ -1,0 +1,27 @@
+/* BRX-100 product entry and detail page */
+.product-card-link { display: flex; flex: 1; flex-direction: column; color: inherit; }
+.product-card-link:focus-visible { outline: 3px solid var(--red); outline-offset: -4px; }
+.product-card-link:is(:hover, :focus-visible) .text-link { color: var(--red); }
+.product-card-link:is(:hover, :focus-visible) .text-link .icon { transform: translate(3px, -3px); }
+
+.brx-hero { padding: clamp(55px, 7vw, 100px) 0; }
+.brx-hero .wrap { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(28px, 6vw, 80px); }
+.brx-hero h1 { font-size: clamp(48px, 9vw, 110px); line-height: 1; letter-spacing: -.07em; margin: 14px 0; }
+.brx-lead { font-size: clamp(20px, 3vw, 34px); font-weight: 650; margin: 0 0 14px; }
+.brx-description { max-width: 510px; line-height: 1.75; color: var(--muted); margin-bottom: 25px; }
+.brx-back { display: inline-block; color: var(--muted); margin-bottom: 24px; }
+.brx-back:hover { color: var(--red); }
+.brx-art { margin: 0; padding: 24px; text-align: center; background: #edf2f4; border: 1px solid var(--line); border-radius: 12px; }
+.brx-art img { width: auto; height: clamp(180px, 28vw, 320px); max-width: 100%; object-fit: contain; }
+.brx-art figcaption { color: var(--muted); font-size: 12px; margin-top: 12px; }
+.brx-specs { background: #fff; border-top: 1px solid var(--line); scroll-margin-top: 85px; }
+.brx-specs dl { margin: 24px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.brx-specs dl > div { border: 1px solid var(--line); border-radius: 6px; padding: clamp(14px, 2.5vw, 24px); }
+.brx-specs dt { font-weight: 650; margin-bottom: 7px; }
+.brx-specs dd { margin: 0; color: var(--muted); line-height: 1.55; overflow-wrap: anywhere; }
+.brx-spec-note { color: var(--muted); max-width: 76ch; line-height: 1.65; }
+
+@media (max-width: 700px) {
+  .brx-hero .wrap { grid-template-columns: 1fr; }
+  .brx-specs dl { grid-template-columns: 1fr; }
+}
