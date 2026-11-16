@@ -12,16 +12,26 @@
 .brx-back { display: inline-block; color: var(--muted); margin-bottom: 24px; }
 .brx-back:hover { color: var(--red); }
 .brx-art { margin: 0; padding: 24px; text-align: center; background: #edf2f4; border: 1px solid var(--line); border-radius: 12px; }
-.brx-art img { width: auto; height: clamp(180px, 28vw, 320px); max-width: 100%; object-fit: contain; }
+.brx-art img { margin-inline: auto; width: auto; height: clamp(180px, 28vw, 320px); max-width: 100%; object-fit: contain; }
 .brx-art figcaption { color: var(--muted); font-size: 12px; margin-top: 12px; }
 .brx-specs { background: #fff; border-top: 1px solid var(--line); scroll-margin-top: 85px; }
-.brx-specs dl { margin: 24px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.brx-specs dl > div { border: 1px solid var(--line); border-radius: 6px; padding: clamp(14px, 2.5vw, 24px); }
-.brx-specs dt { font-weight: 650; margin-bottom: 7px; }
-.brx-specs dd { margin: 0; color: var(--muted); line-height: 1.55; overflow-wrap: anywhere; }
+.brx-summary { display: flex; flex-wrap: wrap; gap: 12px 30px; margin: 0 0 26px; }
+.brx-summary dt { color: var(--muted); font-size: 12px; font-weight: 600; }
+.brx-summary dd { margin: 4px 0 0; font-size: 17px; font-weight: 650; }
+.brx-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.brx-actions .button { min-height: 44px; text-align: center; }
+.brx-spec-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 24px 0; }
+.brx-spec-group { padding: clamp(16px, 2.5vw, 28px); border: 1px solid var(--line); border-radius: 8px; }
+.brx-spec-group h3 { margin: 0 0 10px; font-size: 21px; font-weight: 650; }
+.brx-spec-group dl { margin: 0; }
+.brx-spec-group dl > div { padding: 9px 0; border-bottom: 1px solid var(--line); }
+.brx-spec-group dl > div:last-child { padding-bottom: 0; border-bottom: 0; }
+.brx-spec-group dt { font-size: 13px; font-weight: 650; }
+.brx-spec-group dd { margin: 2px 0 0; color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
+.faq-list p a { color: var(--ink); text-decoration: underline; text-underline-offset: .15em; }
 .brx-spec-note { color: var(--muted); max-width: 76ch; line-height: 1.65; }
 
 @media (max-width: 700px) {
   .brx-hero .wrap { grid-template-columns: 1fr; }
-  .brx-specs dl { grid-template-columns: 1fr; }
+  .brx-spec-grid { grid-template-columns: 1fr; }
 }
