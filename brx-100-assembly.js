@@ -4,7 +4,7 @@
   const artwork = document.querySelector('[data-brx-assembly]');
   if (!artwork) return;
 
-  const video = artwork.querySelector('video');
+  const still = artwork.querySelector('img');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const key = 'brx-100-assembly-seen';
   const paused = () => motion.matches || document.body.classList.contains('motion-paused');
@@ -12,36 +12,51 @@
   try {
     if (sessionStorage.getItem(key)) return;
   } catch {
-    // The still image remains available when storage is restricted.
+    // Storage restrictions do not prevent playback on this visit.
   }
   if (paused()) return;
 
   let visibilityObserver;
-  const preferenceObserver = new MutationObserver(checkMotion);
-
-  function finish() {
-    video.pause();
-    artwork.classList.remove('is-assembling');
-    preferenceObserver.disconnect();
-    motion.removeEventListener('change', checkMotion);
-  }
-
-  function checkMotion() {
-    if (paused()) finish();
-  }
 
   function start() {
     visibilityObserver?.disconnect();
     if (paused()) return;
 
-    video.poster = video.dataset.poster;
-    video.src = video.dataset.src;
-    artwork.classList.add('is-assembling');
+    const video = document.createElement('video');
+    video.width = still.width;
+    video.height = still.height;
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.setAttribute('role', 'img');
+    video.setAttribute('aria-label', still.alt);
+    video.poster = artwork.dataset.poster;
+    video.src = artwork.dataset.src;
+
+    const preferenceObserver = new MutationObserver(checkMotion);
+
+    function finish() {
+      if (artwork.firstElementChild !== video) return;
+      artwork.replaceChildren(still);
+      preferenceObserver.disconnect();
+      motion.removeEventListener('change', checkMotion);
+      window.removeEventListener('pagehide', finish);
+      window.removeEventListener('beforeprint', finish);
+      video.pause();
+    }
+
+    function checkMotion() {
+      if (paused()) finish();
+    }
+
     motion.addEventListener('change', checkMotion);
     preferenceObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-
+    window.addEventListener('pagehide', finish);
+    window.addEventListener('beforeprint', finish);
     video.addEventListener('ended', finish, { once: true });
     video.addEventListener('error', finish, { once: true });
+
+    artwork.replaceChildren(video);
     video.play().then(() => {
       try { sessionStorage.setItem(key, '1'); } catch {}
     }).catch(finish);
