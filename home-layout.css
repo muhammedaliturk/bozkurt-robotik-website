@@ -1,0 +1,570 @@
+.home-page {
+  scroll-padding-top: var(--header);
+}
+
+.home-page main > .section {
+  min-height: calc(100svh - var(--header));
+  display: grid;
+  align-items: center;
+  padding-block: clamp(18px, 4svh, 48px);
+}
+
+.home-page .section-heading {
+  grid-template-columns: 1fr minmax(0, .85fr);
+  align-items: end;
+  gap: 10px clamp(18px, 5vw, 72px);
+  margin-bottom: clamp(16px, 3.3svh, 36px);
+}
+
+.home-page .section-heading h2 {
+  font-size: clamp(30px, 4vw, 55px);
+}
+
+.home-page .section-heading > p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.home-page .hero {
+  min-height: calc(100svh - var(--header));
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding-top: 0;
+}
+
+.home-page .hero-grid {
+  min-height: 0;
+  padding-block: clamp(12px, 2.4svh, 34px);
+}
+
+.home-page .orbital-stage {
+  width: 100%;
+  height: min(57svh, 570px);
+  margin-inline: auto;
+}
+
+.home-page .scene-emblem {
+  top: 50%;
+}
+
+.home-page .scene-console {
+  margin-top: 10px;
+}
+
+.home-page .capability-strip {
+  padding-block: 12px;
+}
+
+.home-page .technology {
+  background: var(--dark);
+  color: #f2f7fa;
+}
+
+.home-page .technology .section-heading > p {
+  color: #b5cad5;
+}
+
+.workflow {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  border: 1px solid #385263;
+  border-radius: 12px;
+  background: #152f40;
+}
+
+.workflow-step {
+  padding: clamp(12px, 2.6vw, 32px);
+  border-inline-start: 1px solid #385263;
+}
+
+.workflow-step:first-child {
+  border-inline-start: 0;
+}
+
+.workflow-number {
+  display: block;
+  margin-bottom: clamp(7px, 2.5svh, 25px);
+  color: #ff8d82;
+  font: 600 13px/1.3 Consolas, monospace;
+}
+
+.workflow-step h3 {
+  margin-bottom: 8px;
+  font-size: clamp(17px, 2vw, 27px);
+  color: #fff;
+}
+
+.workflow-step p {
+  margin: 0;
+  color: #b5cad5;
+  font-size: clamp(12px, 1.2vw, 15px);
+  line-height: 1.5;
+}
+
+.home-page .product-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(8px, 1.5vw, 20px);
+}
+
+.home-page .product-0 {
+  display: flex;
+  grid-column: auto;
+}
+
+.home-page .product-card .product-top {
+  min-height: 0;
+  gap: 6px;
+  padding: 14px 16px 2px !important;
+}
+
+.home-page .product-card .product-art {
+  height: clamp(112px, 26svh, 248px);
+}
+
+.home-page .product-card .product-art svg {
+  height: 84%;
+}
+
+.home-page .product-card .product-copy {
+  padding: 12px 16px 14px;
+}
+
+.home-page .product-card .product-copy h3 {
+  min-height: 0;
+  margin-bottom: 7px;
+  font-size: clamp(19px, 2vw, 26px);
+  text-wrap: wrap;
+}
+
+.home-page .product-card .product-copy p {
+  line-height: 1.45;
+  margin-bottom: 9px;
+}
+
+.home-page .product-card .text-link {
+  padding-top: 8px;
+}
+
+.software-details {
+  margin-top: 10px;
+}
+
+.software-details summary {
+  width: fit-content;
+  padding: 5px 2px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.software-details summary:hover {
+  color: var(--red);
+}
+
+.home-page .studio-grid {
+  min-height: 0;
+}
+
+.home-page .studio-top {
+  padding-block: 10px;
+}
+
+.home-page .studio-tabs, .home-page .studio-panel {
+  padding-block: 12px;
+}
+
+.home-page #studio-note {
+  margin-bottom: 9px;
+  min-height: 0;
+}
+
+.home-page .chart-wrap {
+  padding-block: 7px;
+}
+
+.home-page .telemetry-chart {
+  height: clamp(64px, 16svh, 140px);
+}
+
+.home-page .chart-bottom, .home-page .chart-disclaimer {
+  margin-top: 6px;
+}
+
+.home-page .software-features {
+  margin-block: 14px;
+  gap: 10px;
+}
+
+.home-page .algorithms {
+  padding-top: 10px;
+  gap: 12px;
+}
+
+.home-page .subtle-note {
+  margin-top: 10px;
+}
+
+.home-page .application-card {
+  padding-block: clamp(12px, 3.2svh, 36px) !important;
+}
+
+.home-page .application-card > .icon {
+  margin-bottom: clamp(12px, 2.5svh, 28px);
+}
+
+.home-page .app-number {
+  display: none;
+}
+
+.home-page .about-brand {
+  padding: clamp(10px, 2.5svh, 30px);
+}
+
+.home-page .about-brand img {
+  width: min(100%, 29svh, 270px);
+}
+
+.home-page .future-family {
+  margin-top: clamp(12px, 4svh, 42px);
+  padding: 14px 20px;
+}
+
+.home-page .about-copy h2 {
+  margin-bottom: 14px;
+}
+
+.home-page .about-copy > p:not(.eyebrow) {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  .home-page main > .section {
+    padding-block: 14px;
+  }
+
+  .home-page .section-heading {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .home-page .section-heading h2 {
+    font-size: clamp(25px, 7vw, 34px);
+  }
+
+  .home-page .section-heading > p {
+    font-size: 12px;
+  }
+
+  .home-page .hero-grid {
+    padding-block: 12px 8px;
+    gap: 12px;
+  }
+
+  .home-page .hero-intro, .home-page .hero h1, .home-page .hero-description {
+    margin-bottom: 9px;
+  }
+
+  .home-page .hero h1 {
+    font-size: clamp(30px, 7.9vw, 48px);
+  }
+
+  .home-page .hero-description {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .home-page .hero-actions {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .home-page .hero-actions .button {
+    flex: 0 1 auto;
+    min-height: 38px;
+    padding: 7px 9px;
+  }
+
+  .home-page .development-note {
+    margin-top: 9px;
+    margin-bottom: 0;
+  }
+
+  .home-page .orbital-stage {
+    height: min(34svh, 310px);
+  }
+
+  .home-page .scene-console {
+    margin-top: 5px;
+    padding-block: 6px 2px;
+    gap: 8px;
+  }
+
+  .home-page .capability-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    padding-block: 6px;
+  }
+
+  .home-page .capability-strip > div,
+  .home-page .capability-strip > div + div {
+    padding: 0;
+    border: 0;
+  }
+
+  .home-page .capability-strip span {
+    display: none;
+  }
+
+  .workflow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workflow-step {
+    padding: 13px 11px;
+  }
+
+  .workflow-step:nth-child(odd) {
+    border-inline-start: 0;
+  }
+
+  .workflow-step:nth-child(n + 3) {
+    border-top: 1px solid #385263;
+  }
+
+  .workflow-step h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .home-page .product-grid {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .home-page .product-card, .home-page .product-card-link {
+    display: grid;
+    grid-template-columns: minmax(62px, 25%) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    align-items: start;
+  }
+
+  .home-page .product-card-link {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+  .home-page .product-card .product-top {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 5px 7px 0 !important;
+  }
+
+  .home-page .product-card .product-top .eyebrow,
+  .home-page .product-card .art-caption {
+    display: none;
+  }
+
+  .home-page .product-card .status-chip {
+    font-size: 9px;
+  }
+
+  .home-page .product-card .product-art {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: center;
+    height: 84px;
+    padding: 3px;
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .home-page .imu-board, .home-page .motor-board {
+    height: min(63px, 82%);
+  }
+
+  .home-page .product-card .product-copy {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 3px 7px 7px;
+    border: 0;
+  }
+
+  .home-page .product-card .product-copy h3 {
+    margin-bottom: 3px;
+    font-size: 16px;
+    line-height: 1.15;
+  }
+
+  .home-page .product-card .technical-code {
+    font-size: 8px;
+    margin-bottom: 2px;
+  }
+
+  .home-page .product-card .product-copy p {
+    font-size: 11px;
+    line-height: 1.35;
+    margin-bottom: 4px;
+  }
+
+  .home-page .product-card .text-link {
+    font-size: 11px;
+    padding-top: 3px;
+  }
+
+  .home-page .studio-tabs {
+    padding: 4px 5px;
+  }
+
+  .home-page .studio-tabs > button {
+    min-width: 0;
+    flex: 1 1 0;
+    padding: 5px 2px;
+    white-space: normal;
+  }
+
+  .home-page .studio-tabs > button > span {
+    display: none;
+  }
+
+  .home-page .studio-panel {
+    padding: 8px 10px;
+  }
+
+  .home-page .studio-copy h3 {
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+
+  .home-page #studio-note {
+    font-size: 10px;
+  }
+
+  .home-page .software-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-block: 8px;
+    gap: 4px 8px;
+  }
+
+  .home-page .algorithms {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+    padding-top: 6px;
+  }
+
+  .home-page .algorithms p {
+    font-size: 10px;
+    line-height: 1.4;
+    margin-top: 2px;
+  }
+
+  .home-page .subtle-note {
+    margin-top: 6px;
+  }
+
+  .home-page .applications-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-page .application-card {
+    padding-inline: 10px !important;
+  }
+
+  .home-page .application-card h3 {
+    font-size: 19px;
+    margin-bottom: 5px;
+  }
+
+  .home-page .about-grid {
+    gap: 12px;
+  }
+
+  .home-page .about-brand {
+    padding: 0;
+  }
+
+  .home-page .about-brand img {
+    width: min(130px, 20svh);
+  }
+
+  .home-page .about-copy .eyebrow {
+    margin-bottom: 7px;
+  }
+
+  .home-page .about-copy h2, .home-page .contact h2 {
+    font-size: clamp(26px, 8vw, 40px);
+  }
+
+  .home-page .about-copy > p:not(.eyebrow) {
+    line-height: 1.5;
+    margin-bottom: 6px;
+  }
+
+  .home-page .future-family {
+    padding: 10px 12px;
+  }
+
+  .home-page .future-family > strong {
+    font-size: 14px;
+    line-height: 1.45;
+    margin-block: 3px;
+  }
+}
+
+@media (max-width: 440px) {
+  .home-page .hero h1 { font-size: clamp(28px, 7vw, 39px); }
+  .home-page .scene-top, .home-page .capability-strip { display: none; }
+  .home-page .hero { grid-template-rows: 1fr; }
+  .home-page .hero-grid { align-content: center; }
+  .home-page .development-note { line-height: 1.4; }
+}
+
+@media (max-height: 720px) and (min-width: 701px) {
+  .home-page .hero-intro, .home-page .hero h1, .home-page .hero-description {
+    margin-bottom: 13px;
+  }
+  .home-page .hero h1 { font-size: clamp(36px, 4.3vw, 62px); }
+  .home-page .hero-description { line-height: 1.5; }
+  .home-page .development-note { margin-top: 15px; }
+}
+
+@media (min-width: 701px) and (max-width: 960px) {
+  .home-page .orbital-stage {
+    height: min(55svh, 530px);
+  }
+}
+
+@media (max-width: 360px) {
+  .home-page main > .section {
+    padding-block: 10px;
+  }
+
+  .home-page .hero-grid {
+    padding-block: 9px 5px;
+    gap: 8px;
+  }
+
+  .home-page .hero-actions .button {
+    gap: 5px;
+    padding-inline: 7px;
+  }
+
+  .home-page .hero-actions .icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .home-page .orbital-stage {
+    height: 23svh;
+  }
+
+  .home-page .about-brand img {
+    width: 78px;
+  }
+
+  .home-page .future-family {
+    margin-top: 12px;
+  }
+}

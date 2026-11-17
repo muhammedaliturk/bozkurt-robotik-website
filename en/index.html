@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="home-page">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Bozkurt Robotik | Intelligent Motor Control and Sensor Systems</title><meta name="description" content="Motor characterization, embedded control software and 9-DoF sensor modules. Discover Bozkurt Robotik's motor control platform.">
@@ -12,6 +12,7 @@
 <link rel="icon" href="../assets/favicon.png" type="image/png">
 <link rel="stylesheet" href="../styles-1952df4e5c37.css">
 <link rel="stylesheet" href="../brx-100.css?v=2">
+<link rel="stylesheet" href="../home-layout.css">
 </head>
 <body>
 <a class="skip-link" href="#main">İçeriğe geç</a>
@@ -35,8 +36,8 @@
    <div class="hero-copy">
     <p class="eyebrow hero-intro"><span class="red-line"></span>INTELLIGENT MOTOR CONTROL & SENSOR SYSTEMS</p>
     <h1><span class="title-line">Understand motion.</span><span class="title-line">Simplify</span><span class="title-line accent">control.</span></h1>
-    <p class="hero-description">We are developing a platform that understands your motor and simplifies controller design. Hardware, embedded software and sensing, united by a single engineering approach.</p>
-    <div class="hero-actions"><a href="#technology" class="button primary">Explore the platform<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#products" class="button quiet">Explore our products<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+    <p class="hero-description">Hardware and software for motor identification, embedded control and motion sensing.</p>
+    <div class="hero-actions"><a href="#technology" class="button primary">Explore platform<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#products" class="button quiet">View products<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
     <p class="development-note"><span></span>The first motor controller prototype is complete. Development and validation are ongoing.</p>
    </div>
    <div class="hero-scene" data-scene>
@@ -55,23 +56,39 @@
   </div>
   <div class="wrap capability-strip"><div><span>01</span>Motor control electronics</div><div><span>02</span>Embedded control software</div><div><span>03</span>Motion sensing</div></div>
  </section>
- <section class="technology section" id="technology">
+ <section class="technology section" id="technology" aria-labelledby="technology-title">
   <div class="wrap">
-   <div class="section-heading" data-reveal><div><p class="eyebrow">ENGINEERING CONTROL INTO PRODUCTS</p><h2>More than<br>a motor driver.</h2></div><p>Our aim goes beyond spinning a motor. We bring the complexities of modeling and tuning into a usable control platform.</p></div>
-   <div class="story-grid">
-    <div class="story-visual"><div class="flow-panel">
-     <div class="panel-top"><span>TARGET WORKFLOW</span><span class="panel-dots" aria-hidden="true">•••</span></div>
-     <div class="flow-core"><img src="../assets/bozkurt-amblem.webp" width="50" height="56" alt=""><div><small>BOZKURT ROBOTİK</small><strong>Control layer</strong></div><span class="live-dot"></span></div>
-     <div class="flow-chain"><div class="flow-node is-active" data-node="0"><span>01</span><strong>Motor + encoder</strong><i aria-hidden="true"></i></div><div class="flow-node " data-node="1"><span>02</span><strong>Characterization</strong><i aria-hidden="true"></i></div><div class="flow-node " data-node="2"><span>03</span><strong>Controller design</strong><i aria-hidden="true"></i></div><div class="flow-node " data-node="3"><span>04</span><strong>Validation</strong><i aria-hidden="true"></i></div></div>
-     <p class="flow-footer">Hardware + embedded software + desktop application</p>
-    </div></div>
-    <div class="story-steps"><article class="story-step" data-step="0" data-reveal><div class="step-number">01</div><div><h3>Connect.</h3><p>Connect the motor and encoder to the same control architecture. Define your position, velocity or current target.</p></div></article><article class="story-step" data-step="1" data-reveal><div class="step-number">02</div><div><h3>Identify the motor.</h3><p>We aim to characterize the motor and mechanical load through controlled test sequences.</p></div></article><article class="story-step" data-step="2" data-reveal><div class="step-number">03</div><div><h3>Design control.</h3><p>We integrate system identification, controller design and disturbance estimation into a unified software workflow.</p></div></article><article class="story-step" data-step="3" data-reveal><div class="step-number">04</div><div><h3>Validate.</h3><p>Evaluate the control architecture through telemetry, testing and performance analysis.</p></div></article></div>
+   <div class="section-heading">
+    <h2 id="technology-title">Motor control platform</h2>
+    <p>Motor characterization, controller design and telemetry in one workflow.</p>
    </div>
+   <ol class="workflow" role="list">
+    <li class="workflow-step">
+     <span class="workflow-number" aria-hidden="true">01</span>
+     <h3>Motor connection</h3>
+     <p>Connect an encoder-equipped DC motor. Select position, speed or current control.</p>
+    </li>
+    <li class="workflow-step">
+     <span class="workflow-number" aria-hidden="true">02</span>
+     <h3>Characterization</h3>
+     <p>Measure how the motor and load respond to test sequences.</p>
+    </li>
+    <li class="workflow-step">
+     <span class="workflow-number" aria-hidden="true">03</span>
+     <h3>Controller design</h3>
+     <p>Use the motor model to select the control structure and tune its gains.</p>
+    </li>
+    <li class="workflow-step">
+     <span class="workflow-number" aria-hidden="true">04</span>
+     <h3>Validation</h3>
+     <p>Compare the reference and measured response in telemetry.</p>
+    </li>
+   </ol>
   </div>
  </section>
  <section class="portfolio section" id="products">
   <div class="wrap">
-   <div class="section-heading" data-reveal><div><p class="eyebrow">PRODUCT ECOSYSTEM</p><h2>Control at the core.<br>Sensing alongside.</h2></div><p>Our core technology is intelligent motor control. Our sensor modules form a complementary product line.</p></div>
+   <div class="section-heading"><h2 id="products-title">Products</h2><p>Motor controllers and motion sensing modules.</p></div>
    <div class="product-grid"><article class="product-card product-0" id="motor-control" data-reveal>
    <div class="product-top"><span class="eyebrow">CORE TECHNOLOGY</span><span class="status-chip"><i></i>Prototype / validation</span></div>
    <div class="product-art product-art-render">
@@ -82,7 +99,7 @@
       <span class="motor-product-shadow" aria-hidden="true"></span>
       <span class="motor-product-tilt" aria-hidden="true"><span class="motor-product-float"><picture>
         <source srcset="../assets/motor-controller-render-v36.webp" type="image/webp">
-        <img class="motor-board" src="../assets/motor-controller-render-v36.png" alt="" width="403" height="503" loading="lazy" decoding="async">
+        <img class="motor-board" src="../assets/motor-controller-render-v36.png" alt="" width="403" height="503" fetchpriority="low" decoding="async">
       </picture></span></span>
       <span class="motor-product-beacon motor-beacon-left" aria-hidden="true"></span>
       <span class="motor-product-beacon motor-beacon-right" aria-hidden="true"></span>
@@ -90,7 +107,7 @@
     </div>
     <span class="art-caption">Controller PCB rendering</span>
    </div>
-   <div class="product-copy"><span class="technical-code">Position / Velocity / Current</span><h3>Intelligent DC Motor Controller</h3><p>A platform intended to combine characterization, controller design, and position, velocity and current control for brushed DC motors with encoders.</p>
+   <div class="product-copy"><span class="technical-code">Position / Velocity / Current</span><h3>Intelligent DC Motor Controller</h3><p>Identification and position, speed and current control for encoder-equipped DC motors.</p>
    <button type="button" class="text-link" data-product="0">Explore product<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button></div></article><article class="product-card product-1" id="sensors" data-reveal><a class="product-card-link" href="brx-100.html" aria-labelledby="brx-100-title">
    <div class="product-top"><span class="eyebrow">MID-RANGE SENSOR MODULE</span><span class="status-chip"><i></i>Preparing for commercialization</span></div>
    <div class="product-art product-art-render"><div class="imu-visual" role="img" aria-label="3D product render of the Bozkurt Robotik standard 9-DoF IMU module">
@@ -100,12 +117,12 @@
       <span class="imu-shadow" aria-hidden="true"></span>
       <span class="imu-tilt"><span class="imu-float"><picture>
         <source srcset="../assets/imu-standard-render-v36.webp" type="image/webp">
-        <img class="imu-board" src="../assets/imu-standard-render-v36.png" alt="" width="510" height="775" loading="lazy" decoding="async">
+        <img class="imu-board" src="../assets/imu-standard-render-v36.png" alt="" width="510" height="775" fetchpriority="low" decoding="async">
       </picture></span></span>
       <span class="imu-spark imu-spark-1" aria-hidden="true"></span>
       <span class="imu-spark imu-spark-2" aria-hidden="true"></span>
     </div><span class="art-caption">BRX-100 PCB rendering</span></div>
-   <div class="product-copy"><span class="technical-code">LSM6DSOXTR + MMC5603NJ</span><h3 id="brx-100-title">BRX-100 · 9-axis IMU</h3><p>An accelerometer, gyroscope and magnetometer combined in one module for general robotics, embedded systems and research applications.</p>
+   <div class="product-copy"><span class="technical-code">LSM6DSOXTR + MMC5603NJ</span><h3 id="brx-100-title">BRX-100 · 9-axis IMU</h3><p>A 9-axis module for acceleration, angular rate and magnetic field sensing.</p>
    <span class="text-link">Explore the BRX-100<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span></div></a></article><article class="product-card product-2" id="advanced-imu" data-reveal>
    <div class="product-top"><span class="eyebrow">ADVANCED SENSOR MODULE</span><span class="status-chip"><i></i>Research & development</span></div>
    <div class="product-art"><svg class="sensor-art art-2" viewBox="0 0 480 300" fill="none" aria-hidden="true">
@@ -119,13 +136,13 @@
  <circle cx="240" cy="153" r="6" fill="#d6261c"/><circle cx="240" cy="31" r="4" fill="#d6261c"/><circle cx="379" cy="212" r="4" fill="#d6261c"/><circle cx="101" cy="212" r="4" fill="#d6261c"/>
  <g fill="#6b7a84" font-size="11" font-family="sans-serif"><text x="249" y="32">Z</text><text x="389" y="220">X</text><text x="81" y="223">Y</text></g>
  </svg><span class="art-caption">Sensor architecture</span></div>
-   <div class="product-copy"><span class="technical-code">ICM-42688 + MMC5983MA</span><h3>Advanced 9-DoF IMU</h3><p>A second IMU family being developed for a different performance tier in robotics and motion estimation research.</p>
+   <div class="product-copy"><span class="technical-code">ICM-42688 + MMC5983MA</span><h3>Advanced 9-DoF IMU</h3><p>A sensor module in development for motion estimation and robotics research.</p>
    <button type="button" class="text-link" data-product="2">Explore product<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button></div></article></div>
   </div>
  </section>
  <section class="software section" id="software">
   <div class="wrap">
-   <div class="section-heading" data-reveal><div><p class="eyebrow">COMPLEMENTING THE HARDWARE</p><h2>Understand your motor.<br>Visualize control.</h2></div><p>We are developing software that combines characterization, controller design and telemetry in one desktop interface.</p></div>
+   <div class="section-heading"><h2 id="software-title">Control software</h2><p>A desktop interface for characterization, controller design and telemetry.</p></div>
    <div class="studio" data-reveal>
     <div class="studio-top"><div class="studio-brand"><span class="small-square"></span>Bozkurt Robotik <span class="studio-slash">/</span> Control Studio</div><span class="concept-badge">INTERFACE CONCEPT</span></div>
     <div class="studio-grid">
@@ -138,21 +155,23 @@
      </div>
     </div>
    </div>
-   <div class="software-features"><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Automated test sequences</span><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Motor profile management</span><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Parameter estimation</span><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Logging and fault monitoring</span></div>
+   <details class="software-details"><summary>Software features</summary>
+<div class="software-features"><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Automated test sequences</span><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Motor profile management</span><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Parameter estimation</span><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Logging and fault monitoring</span></div>
    <div class="algorithms"><div><span>Control modes</span><p>Position · Velocity · Current</p></div><div><span>Control methods</span><p>PI / PD / PID · LQR / LQI · MRAC</p></div><div><span>Estimation methods</span><p>Disturbance observer · Extended state observer</p></div></div><p class="subtle-note">These architectures are under development and validation.</p>
+   </details>
   </div>
  </section>
  <section class="applications section" id="applications"><div class="wrap">
-  <div class="section-heading" data-reveal><div><p class="eyebrow">POTENTIAL APPLICATION AREAS</p><h2>Different systems.<br>One engineering approach.</h2></div></div>
+  <div class="section-heading"><h2 id="applications-title">Applications</h2></div>
   <div class="applications-grid"><article class="application-card" data-reveal><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M7 20v-4l5-5-4-5 3-3 7 8-6 6v3"/><circle cx="12" cy="11" r="2"/><path d="m8 6-3-2M17 7l3-3"/></svg><span class="app-number">01</span><h3>Robotics</h3><p>Mobile robots, robot arms and motion platforms.</p></article><article class="application-card" data-reveal><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V9l6 5V5h4l2 16ZM6 17v1M10 17v1M15 17v1"/></svg><span class="app-number">02</span><h3>Automation</h3><p>Mechatronic systems and custom machinery.</p></article><article class="application-card" data-reveal><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v7L4 20h16l-6-10V3M7 15h10"/></svg><span class="app-number">03</span><h3>R&D</h3><p>University laboratories and research/test rigs.</p></article><article class="application-card" data-reveal><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg><span class="app-number">04</span><h3>Embedded systems</h3><p>Motion control and multi-axis sensing applications.</p></article></div>
  </div></section>
  <section class="about section" id="about"><div class="wrap">
   <div class="about-grid"><div class="about-brand" data-reveal><div class="brand-orbit"></div><img src="../assets/bozkurt-robotik-logo.webp" width="320" height="310" alt="Bozkurt Robotik" loading="lazy"></div>
-   <div class="about-copy" data-reveal><p class="eyebrow">BOZKURT ROBOTİK</p><h2>From hardware to algorithms,<br>one shared goal.</h2><p>We approach motor control not simply as an electronics board but as an integrated system of hardware, embedded control software, system identification and user interface.</p><p>Our sensor product line supports our production expertise and product ecosystem. Brushless DC and permanent-magnet synchronous motor control are R&D priorities for our future product family.</p></div></div>
+   <div class="about-copy" data-reveal><p class="eyebrow">BOZKURT ROBOTİK</p><h2>From hardware to algorithms,<br>one shared goal.</h2><p>We build motor control platforms that combine hardware, embedded software, system identification and a desktop interface.</p><p>Alongside our motion sensor modules, we research brushless DC and synchronous motor control.</p></div></div>
   <div class="future-family" data-reveal><span>Future product family</span><strong>Brushed DC → Brushless DC → Permanent-magnet synchronous motor</strong><p>Brushless motor solutions are in R&D.</p></div>
 
  </div></section>
- <section class="faq section"><div class="wrap faq-grid"><h2 data-reveal>Frequently asked questions</h2><div class="faq-list" data-reveal><details><summary>Are the products available for sale?<span aria-hidden="true">+</span></summary><p>The first DC motor controller prototype is complete; revisions and validation continue. The BRX-100 is being prepared for commercialization, while the advanced IMU remains in R&D. Contact us for current availability.</p></details><details><summary>Where can I find BRX-100 wiring and driver information?<span aria-hidden="true">+</span></summary><p>The <a href="brx-100.html#imu-resources">BRX-100 product page</a> includes the pinout, supply requirements, datasheet and software packages.</p></details></div></div></section>
+ <section class="faq section" id="faq"><div class="wrap faq-grid"><h2 data-reveal>Frequently asked questions</h2><div class="faq-list" data-reveal><details><summary>Are the products available for sale?<span aria-hidden="true">+</span></summary><p>The first DC motor controller prototype is complete; revisions and validation continue. The BRX-100 is being prepared for commercialization, while the advanced IMU remains in R&D. Contact us for current availability.</p></details><details><summary>Where can I find BRX-100 wiring and driver information?<span aria-hidden="true">+</span></summary><p>The <a href="brx-100.html#imu-resources">BRX-100 product page</a> includes the pinout, supply requirements, datasheet and software packages.</p></details></div></div></section>
  <section class="contact section" id="contact"><div class="wrap contact-grid">
   <div data-reveal><p class="eyebrow">LET'S DEVELOP TOGETHER</p><h2>Let's design the next move<br>together.</h2><p>Contact us about pilot applications, product inquiries, distribution and engineering partnerships.</p></div>
   <div class="contact-actions" data-reveal><a class="email-address" href="mailto:info@bozkurtrobotik.com?subject=Bozkurt%20Robotik%20%E2%80%94%20Product%20and%20partnership%20inquiry">info@bozkurtrobotik.com<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
@@ -161,5 +180,5 @@
 </main>
 <footer><div class="wrap footer-inner"><div><strong>BOZKURT ROBOTİK</strong><p>Intelligent motor control and embedded sensing.</p></div><div class="footer-right"><a href="#top">Back to top ↑</a><p>© <span data-year>2026</span> Bozkurt Robotik. All rights reserved.</p></div></div></footer>
 <dialog class="product-dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><button type="button" class="dialog-close" aria-label="Close"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button><p class="eyebrow" id="dialog-label"></p><h2 id="dialog-title"></h2><p class="dialog-status"></p><p class="dialog-description"></p><div class="dialog-spec"></div><p class="dialog-caveat"></p><a class="button primary dialog-inquiry" href="mailto:info@bozkurtrobotik.com">Ask about this product<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div></dialog>
-<script src="../script-4e08e27733f7.js" defer></script>
+<script src="../script-fb003228222b.js" defer></script>
 </body></html>

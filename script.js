@@ -161,18 +161,6 @@
     $$('[data-reveal]').forEach(el => reveal.observe(el));
     document.body.classList.add('motion-ready');
 
-    const steps = $$('.story-step');
-    const ratios = new Map();
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => ratios.set(entry.target, entry.intersectionRatio));
-      const best = steps.reduce((a, b) => (ratios.get(a) || 0) > (ratios.get(b) || 0) ? a : b);
-      if (!best || !(ratios.get(best) > 0)) return;
-      const index = best.dataset.step;
-      steps.forEach(step => step.classList.toggle('is-current', step === best));
-      $$('.flow-node').forEach(node => node.classList.toggle('is-active', node.dataset.node === index));
-    }, {rootMargin:'-15% 0px -35% 0px', threshold:[0,.2,.4,.6,.8,1]});
-    steps.forEach(step => observer.observe(step));
-
     const navObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
@@ -318,7 +306,7 @@
   if (!canvas || !stage || !scene) return;
   const ctx = canvas.getContext('2d', {alpha:true});
   if (!ctx) return;
-  let width = 0, height = 0, dpr = 1;
+  let width = 0, height = 0, dpr = 1, projectionScale = 0;
   let frameId = 0, visible = true, lastTime = 0, animationTime = 0;
   let mode = 0, px = 0, py = 0, targetX = 0, targetY = 0;
   const points = [];
@@ -336,8 +324,8 @@
     const x2=x*Math.cos(ry)+z1*Math.sin(ry), z2=-x*Math.sin(ry)+z1*Math.cos(ry);
     const x3=x2*Math.cos(rz)-y1*Math.sin(rz), y3=x2*Math.sin(rz)+y1*Math.cos(rz);
     const perspective=8/(8-z2);
-    return {x:width*.5+x3*width*.136*perspective,
-            y:height*.51+y3*width*.136*perspective,z:z2,p:perspective};
+    return {x:width*.5+x3*projectionScale*perspective,
+            y:height*.5+y3*projectionScale*perspective,z:z2,p:perspective};
   }
   function paint(time) {
     if (width < 1 || height < 1) return;
@@ -427,6 +415,9 @@
     const rect=stage.getBoundingClientRect();
     width=Math.round(rect.width);height=Math.round(rect.height);
     dpr=Math.min(window.devicePixelRatio||1,2);
+    // A radius of 3.5 projects to at most 3.90 units with this camera.
+    // Keep the guides and markers inside the canvas at every view angle.
+    projectionScale=Math.min(width*.136,Math.max(0,Math.min(width,height)-34)/7.8);
     canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);
     renderState();
   }

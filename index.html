@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr" class="home-page">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Bozkurt Robotik | Akıllı Motor Kontrolü ve Sensör Sistemleri</title><meta name="description" content="Motor karakterizasyonu, gömülü kontrol yazılımı ve 9 serbestlik dereceli sensör modülleri. Bozkurt Robotik’in geliştirdiği motor kontrol platformunu keşfedin.">
@@ -12,6 +12,7 @@
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="stylesheet" href="styles-1952df4e5c37.css">
 <link rel="stylesheet" href="brx-100.css?v=2">
+<link rel="stylesheet" href="home-layout.css">
 </head>
 <body>
 <a class="skip-link" href="#main">İçeriğe geç</a>
@@ -35,8 +36,8 @@
    <div class="hero-copy">
     <p class="eyebrow hero-intro"><span class="red-line"></span>AKILLI MOTOR KONTROLÜ & SENSÖR SİSTEMLERİ</p>
     <h1><span class="title-line">Hareketi tanımlayın.</span><span class="title-line">Kontrolü</span><span class="title-line accent">sadeleştirin.</span></h1>
-    <p class="hero-description">Motorunuzu tanıyan, kontrol tasarımını kolaylaştıran bir platform geliştiriyoruz. Donanım, gömülü yazılım ve algılama; tek bir mühendislik yaklaşımı.</p>
-    <div class="hero-actions"><a href="#technology" class="button primary">Platformu keşfedin<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#products" class="button quiet">Ürünleri inceleyin<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+    <p class="hero-description">Motor tanılama, gömülü kontrol ve hareket algılama için donanım ve yazılım geliştiriyoruz.</p>
+    <div class="hero-actions"><a href="#technology" class="button primary">Platformu keşfet<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#products" class="button quiet">Ürünleri incele<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
     <p class="development-note"><span></span>İlk motor kontrol prototipi tamamlandı. Geliştirme ve doğrulama devam ediyor.</p>
    </div>
    <div class="hero-scene" data-scene>
@@ -55,23 +56,39 @@
   </div>
   <div class="wrap capability-strip"><div><span>01</span>Motor kontrol elektroniği</div><div><span>02</span>Gömülü kontrol yazılımı</div><div><span>03</span>Hareket algılama</div></div>
  </section>
- <section class="technology section" id="technology">
+ <section class="technology section" id="technology" aria-labelledby="technology-title">
   <div class="wrap">
-   <div class="section-heading" data-reveal><div><p class="eyebrow">KONTROL MÜHENDİSLİĞİNİ ÜRÜNLEŞTİRİYORUZ</p><h2>Bir sürücüden<br>fazlası.</h2></div><p>Amaç yalnızca motoru döndürmek değil. Motor seviyesindeki modelleme ve ayar karmaşıklığını, kullanılabilir bir kontrol platformunun içinde çözmek.</p></div>
-   <div class="story-grid">
-    <div class="story-visual"><div class="flow-panel">
-     <div class="panel-top"><span>HEDEFLENEN ÇALIŞMA AKIŞI</span><span class="panel-dots" aria-hidden="true">•••</span></div>
-     <div class="flow-core"><img src="assets/bozkurt-amblem.webp" width="50" height="56" alt=""><div><small>BOZKURT ROBOTİK</small><strong>Kontrol katmanı</strong></div><span class="live-dot"></span></div>
-     <div class="flow-chain"><div class="flow-node is-active" data-node="0"><span>01</span><strong>Motor + enkoder</strong><i aria-hidden="true"></i></div><div class="flow-node " data-node="1"><span>02</span><strong>Karakterizasyon</strong><i aria-hidden="true"></i></div><div class="flow-node " data-node="2"><span>03</span><strong>Kontrolcü tasarımı</strong><i aria-hidden="true"></i></div><div class="flow-node " data-node="3"><span>04</span><strong>Doğrulama</strong><i aria-hidden="true"></i></div></div>
-     <p class="flow-footer">Donanım + gömülü yazılım + bilgisayar arayüzü</p>
-    </div></div>
-    <div class="story-steps"><article class="story-step" data-step="0" data-reveal><div class="step-number">01</div><div><h3>Bağlayın.</h3><p>Motor ve enkoderi aynı kontrol mimarisiyle buluşturun. Uygulamanızın konum, hız veya akım hedefini tanımlayın.</p></div></article><article class="story-step" data-step="1" data-reveal><div class="step-number">02</div><div><h3>Motoru tanıyın.</h3><p>Kontrollü test dizileriyle motor ve mekanik yükün davranışını karakterize etmeyi hedefliyoruz.</p></div></article><article class="story-step" data-step="2" data-reveal><div class="step-number">03</div><div><h3>Kontrolü oluşturun.</h3><p>Sistem tanılama, kontrolcü tasarımı ve bozucu kestirimini bütünleşik bir yazılım akışında bir araya getiriyoruz.</p></div></article><article class="story-step" data-step="3" data-reveal><div class="step-number">04</div><div><h3>Doğrulayın.</h3><p>Telemetri, test ve performans incelemesiyle uygulamaya uygun kontrol yapısını değerlendirin.</p></div></article></div>
+   <div class="section-heading">
+    <h2 id="technology-title">Motor kontrol platformu</h2>
+    <p>Motor karakterizasyonu, kontrolcü tasarımı ve telemetri tek bir çalışma akışında.</p>
    </div>
+   <ol class="workflow" role="list">
+    <li class="workflow-step">
+     <span class="workflow-number" aria-hidden="true">01</span>
+     <h3>Motor bağlantısı</h3>
+     <p>Enkoderli DC motoru bağlayın. Konum, hız veya akım kontrolünü seçin.</p>
+    </li>
+    <li class="workflow-step">
+     <span class="workflow-number" aria-hidden="true">02</span>
+     <h3>Karakterizasyon</h3>
+     <p>Test dizileriyle motorun ve yükün davranışını ölçün.</p>
+    </li>
+    <li class="workflow-step">
+     <span class="workflow-number" aria-hidden="true">03</span>
+     <h3>Kontrolcü tasarımı</h3>
+     <p>Motor modeline göre kontrol yapısını ve kazançları belirleyin.</p>
+    </li>
+    <li class="workflow-step">
+     <span class="workflow-number" aria-hidden="true">04</span>
+     <h3>Doğrulama</h3>
+     <p>Referans ve ölçülen tepkiyi telemetri üzerinden karşılaştırın.</p>
+    </li>
+   </ol>
   </div>
  </section>
  <section class="portfolio section" id="products">
   <div class="wrap">
-   <div class="section-heading" data-reveal><div><p class="eyebrow">ÜRÜN EKOSİSTEMİ</p><h2>Kontrol merkezde.<br>Algılama yanında.</h2></div><p>Ana teknolojimiz akıllı motor kontrolü. Sensör modüllerimiz bu odağı tamamlayan ikinci ürün hattımız.</p></div>
+   <div class="section-heading"><h2 id="products-title">Ürünler</h2><p>Motor kontrolcüsü ve hareket algılama modülleri.</p></div>
    <div class="product-grid"><article class="product-card product-0" id="motor-control" data-reveal>
    <div class="product-top"><span class="eyebrow">ANA TEKNOLOJİ</span><span class="status-chip"><i></i>Prototip / doğrulama</span></div>
    <div class="product-art product-art-render">
@@ -82,7 +99,7 @@
       <span class="motor-product-shadow" aria-hidden="true"></span>
       <span class="motor-product-tilt" aria-hidden="true"><span class="motor-product-float"><picture>
         <source srcset="assets/motor-controller-render-v36.webp" type="image/webp">
-        <img class="motor-board" src="assets/motor-controller-render-v36.png" alt="" width="403" height="503" loading="lazy" decoding="async">
+        <img class="motor-board" src="assets/motor-controller-render-v36.png" alt="" width="403" height="503" fetchpriority="low" decoding="async">
       </picture></span></span>
       <span class="motor-product-beacon motor-beacon-left" aria-hidden="true"></span>
       <span class="motor-product-beacon motor-beacon-right" aria-hidden="true"></span>
@@ -90,7 +107,7 @@
     </div>
     <span class="art-caption">Kontrol kartının 3B görünümü</span>
    </div>
-   <div class="product-copy"><span class="technical-code">Konum / Hız / Akım</span><h3>Akıllı DC Motor Kontrolcü</h3><p>Enkoderli fırçalı DC motorlar için karakterizasyon, kontrolcü tasarımı ve konum, hız, akım kontrolünü birleştirmeyi hedefleyen platform.</p>
+   <div class="product-copy"><span class="technical-code">Konum / Hız / Akım</span><h3>Akıllı DC Motor Kontrolcü</h3><p>Enkoderli DC motorlarda karakterizasyon ve konum, hız, akım kontrolü.</p>
    <button type="button" class="text-link" data-product="0">Ürünü inceleyin<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button></div></article><article class="product-card product-1" id="sensors" data-reveal><a class="product-card-link" href="brx-100.html" aria-labelledby="brx-100-title">
    <div class="product-top"><span class="eyebrow">ORTA SEGMENT SENSÖR MODÜLÜ</span><span class="status-chip"><i></i>Ticarileştirme hazırlığı</span></div>
    <div class="product-art product-art-render"><div class="imu-visual" role="img" aria-label="BRX-100 sensör kartının 3B görünümü">
@@ -100,12 +117,12 @@
       <span class="imu-shadow" aria-hidden="true"></span>
       <span class="imu-tilt"><span class="imu-float"><picture>
         <source srcset="assets/imu-standard-render-v36.webp" type="image/webp">
-        <img class="imu-board" src="assets/imu-standard-render-v36.png" alt="" width="510" height="775" loading="lazy" decoding="async">
+        <img class="imu-board" src="assets/imu-standard-render-v36.png" alt="" width="510" height="775" fetchpriority="low" decoding="async">
       </picture></span></span>
       <span class="imu-spark imu-spark-1" aria-hidden="true"></span>
       <span class="imu-spark imu-spark-2" aria-hidden="true"></span>
     </div><span class="art-caption">BRX-100 kartının 3B görünümü</span></div>
-   <div class="product-copy"><span class="technical-code">LSM6DSOXTR + MMC5603NJ</span><h3 id="brx-100-title">BRX-100 · 9 eksenli IMU</h3><p>Genel robotik, gömülü sistem ve araştırma uygulamaları için ivmeölçer, jiroskop ve manyetometreyi bir araya getiren modül.</p>
+   <div class="product-copy"><span class="technical-code">LSM6DSOXTR + MMC5603NJ</span><h3 id="brx-100-title">BRX-100 · 9 eksenli IMU</h3><p>Robotik için 9 eksenli ivme, açısal hız ve manyetik alan ölçümü.</p>
    <span class="text-link">BRX-100’ü inceleyin<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span></div></a></article><article class="product-card product-2" id="advanced-imu" data-reveal>
    <div class="product-top"><span class="eyebrow">İLERİ SEVİYE SENSÖR MODÜLÜ</span><span class="status-chip"><i></i>Ar-Ge aşamasında</span></div>
    <div class="product-art"><svg class="sensor-art art-2" viewBox="0 0 480 300" fill="none" aria-hidden="true">
@@ -119,13 +136,13 @@
  <circle cx="240" cy="153" r="6" fill="#d6261c"/><circle cx="240" cy="31" r="4" fill="#d6261c"/><circle cx="379" cy="212" r="4" fill="#d6261c"/><circle cx="101" cy="212" r="4" fill="#d6261c"/>
  <g fill="#6b7a84" font-size="11" font-family="sans-serif"><text x="249" y="32">Z</text><text x="389" y="220">X</text><text x="81" y="223">Y</text></g>
  </svg><span class="art-caption">Sensör mimarisi</span></div>
-   <div class="product-copy"><span class="technical-code">ICM-42688 + MMC5983MA</span><h3>Yüksek Performans Hedefli IMU</h3><p>Robotik ve hareket kestirimi araştırmalarına yönelik, ayrı bir performans seviyesinde geliştirilen ikinci IMU ailesi.</p>
+   <div class="product-copy"><span class="technical-code">ICM-42688 + MMC5983MA</span><h3>Yüksek Performans Hedefli IMU</h3><p>Hareket kestirimi ve robotik araştırmaları için geliştirilen sensör modülü.</p>
    <button type="button" class="text-link" data-product="2">Ürünü inceleyin<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button></div></article></div>
   </div>
  </section>
  <section class="software section" id="software">
   <div class="wrap">
-   <div class="section-heading" data-reveal><div><p class="eyebrow">DONANIMIN TAMAMLAYICISI</p><h2>Motorunuzu anlayın.<br>Kontrolü görün.</h2></div><p>Karakterizasyon, kontrol tasarımı ve telemetriyi aynı bilgisayar arayüzünde birleştiren yazılım geliştiriyoruz.</p></div>
+   <div class="section-heading"><h2 id="software-title">Kontrol yazılımı</h2><p>Karakterizasyon, kontrol tasarımı ve telemetri için masaüstü arayüzü.</p></div>
    <div class="studio" data-reveal>
     <div class="studio-top"><div class="studio-brand"><span class="small-square"></span>Bozkurt Robotik <span class="studio-slash">/</span> Kontrol Arayüzü</div><span class="concept-badge">ARAYÜZ KAVRAMI</span></div>
     <div class="studio-grid">
@@ -138,21 +155,23 @@
      </div>
     </div>
    </div>
-   <div class="software-features"><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Otomatik test dizileri</span><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Motor profili yönetimi</span><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Parametre kestirimi</span><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Kayıt ve hata izleme</span></div>
+   <details class="software-details"><summary>Yazılım özellikleri</summary>
+<div class="software-features"><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Otomatik test dizileri</span><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Motor profili yönetimi</span><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Parametre kestirimi</span><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg>Kayıt ve hata izleme</span></div>
    <div class="algorithms"><div><span>Kontrol modları</span><p>Konum · Hız · Akım</p></div><div><span>Kontrol yöntemleri</span><p>PI / PD / PID · LQR / LQI · MRAC</p></div><div><span>Kestirim yapıları</span><p>Bozucu gözlemcisi · Genişletilmiş durum gözlemcisi</p></div></div><p class="subtle-note">Bu mimariler geliştirme ve doğrulama kapsamındadır.</p>
+   </details>
   </div>
  </section>
  <section class="applications section" id="applications"><div class="wrap">
-  <div class="section-heading" data-reveal><div><p class="eyebrow">POTANSİYEL UYGULAMA ALANLARI</p><h2>Farklı sistemler.<br>Ortak mühendislik.</h2></div></div>
+  <div class="section-heading"><h2 id="applications-title">Uygulama alanları</h2></div>
   <div class="applications-grid"><article class="application-card" data-reveal><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M7 20v-4l5-5-4-5 3-3 7 8-6 6v3"/><circle cx="12" cy="11" r="2"/><path d="m8 6-3-2M17 7l3-3"/></svg><span class="app-number">01</span><h3>Robotik</h3><p>Mobil robotlar, robot kollar ve hareketli platformlar.</p></article><article class="application-card" data-reveal><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V9l6 5V5h4l2 16ZM6 17v1M10 17v1M15 17v1"/></svg><span class="app-number">02</span><h3>Otomasyon</h3><p>Mekatronik sistemler ve özel makine uygulamaları.</p></article><article class="application-card" data-reveal><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v7L4 20h16l-6-10V3M7 15h10"/></svg><span class="app-number">03</span><h3>Ar-Ge</h3><p>Üniversite laboratuvarları, test ve araştırma düzenekleri.</p></article><article class="application-card" data-reveal><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4Z"/></svg><span class="app-number">04</span><h3>Gömülü sistemler</h3><p>Hareket kontrolü ve çok eksenli algılama uygulamaları.</p></article></div>
  </div></section>
  <section class="about section" id="about"><div class="wrap">
   <div class="about-grid"><div class="about-brand" data-reveal><div class="brand-orbit"></div><img src="assets/bozkurt-robotik-logo.webp" width="320" height="310" alt="Bozkurt Robotik" loading="lazy"></div>
-   <div class="about-copy" data-reveal><p class="eyebrow">BOZKURT ROBOTİK</p><h2>Donanımdan algoritmaya,<br>aynı hedef.</h2><p>Motor kontrolünü yalnızca bir elektronik kart olarak değil; donanım, gömülü kontrol yazılımı, sistem tanılama ve kullanıcı arayüzüyle birlikte ele alıyoruz.</p><p>Sensör ürün hattımız üretim deneyimini ve ürün ekosistemini destekliyor. Fırçasız DC ve sürekli mıknatıslı senkron motor kontrolü ise gelecekteki ürün ailesi için Ar-Ge odağımız.</p></div></div>
+   <div class="about-copy" data-reveal><p class="eyebrow">BOZKURT ROBOTİK</p><h2>Donanımdan algoritmaya,<br>aynı hedef.</h2><p>Donanım, gömülü yazılım, sistem tanılama ve arayüzü tek bir motor kontrol platformunda birleştiriyoruz.</p><p>Hareket algılama modüllerimize ek olarak fırçasız DC ve senkron motor kontrolü üzerine Ar-Ge yürütüyoruz.</p></div></div>
   <div class="future-family" data-reveal><span>Gelecek ürün ailesi</span><strong>Fırçalı DC → Fırçasız DC → Sürekli mıknatıslı senkron motor</strong><p>Fırçasız motor çözümleri Ar-Ge aşamasındadır.</p></div>
 
  </div></section>
- <section class="faq section"><div class="wrap faq-grid"><h2 data-reveal>Sıkça sorulan sorular</h2><div class="faq-list" data-reveal><details><summary>Ürünler şu an satışa hazır mı?<span aria-hidden="true">+</span></summary><p>DC motor kontrolcüde ilk prototip tamamlandı; revizyon ve doğrulama sürüyor. BRX-100 ticarileştirme hazırlığında, ileri seviye IMU ise Ar-Ge aşamasında. Güncel tedarik durumu için iletişime geçin.</p></details><details><summary>BRX-100 için bağlantı ve sürücü bilgilerine nereden ulaşabilirim?<span aria-hidden="true">+</span></summary><p><a href="brx-100.html#imu-resources">BRX-100 ürün sayfasında</a> pin dizilimi, besleme, veri sayfası ve platforma özel yazılım paketleri yer alır.</p></details></div></div></section>
+ <section class="faq section" id="faq"><div class="wrap faq-grid"><h2 data-reveal>Sıkça sorulan sorular</h2><div class="faq-list" data-reveal><details><summary>Ürünler şu an satışa hazır mı?<span aria-hidden="true">+</span></summary><p>DC motor kontrolcüde ilk prototip tamamlandı; revizyon ve doğrulama sürüyor. BRX-100 ticarileştirme hazırlığında, ileri seviye IMU ise Ar-Ge aşamasında. Güncel tedarik durumu için iletişime geçin.</p></details><details><summary>BRX-100 için bağlantı ve sürücü bilgilerine nereden ulaşabilirim?<span aria-hidden="true">+</span></summary><p><a href="brx-100.html#imu-resources">BRX-100 ürün sayfasında</a> pin dizilimi, besleme, veri sayfası ve platforma özel yazılım paketleri yer alır.</p></details></div></div></section>
  <section class="contact section" id="contact"><div class="wrap contact-grid">
   <div data-reveal><p class="eyebrow">BİRLİKTE GELİŞTİRELİM</p><h2>Bir sonraki hareketi<br>birlikte tasarlayalım.</h2><p>Pilot uygulamalar, ürün talepleri, dağıtım ve mühendislik iş birlikleri için bize yazın.</p></div>
   <div class="contact-actions" data-reveal><a class="email-address" href="mailto:info@bozkurtrobotik.com?subject=Bozkurt%20Robotik%20%E2%80%94%20%C3%9Cr%C3%BCn%20ve%20i%C5%9F%20birli%C4%9Fi%20talebi">info@bozkurtrobotik.com<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
@@ -161,5 +180,5 @@
 </main>
 <footer><div class="wrap footer-inner"><div><strong>BOZKURT ROBOTİK</strong><p>Akıllı motor kontrolü ve gömülü algılama.</p></div><div class="footer-right"><a href="#top">Başa dön ↑</a><p>© <span data-year>2026</span> Bozkurt Robotik. Tüm hakları saklıdır.</p></div></div></footer>
 <dialog class="product-dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><button type="button" class="dialog-close" aria-label="Kapat"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button><p class="eyebrow" id="dialog-label"></p><h2 id="dialog-title"></h2><p class="dialog-status"></p><p class="dialog-description"></p><div class="dialog-spec"></div><p class="dialog-caveat"></p><a class="button primary dialog-inquiry" href="mailto:info@bozkurtrobotik.com">Bu ürün hakkında yazın<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div></dialog>
-<script src="script-4e08e27733f7.js" defer></script>
+<script src="script-fb003228222b.js" defer></script>
 </body></html>
