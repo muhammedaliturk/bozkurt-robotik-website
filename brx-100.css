@@ -1,46 +1,389 @@
-/* BRX-100 product entry and detail page */
-.product-card-link { display: flex; flex: 1; flex-direction: column; color: inherit; }
-.product-card-link:focus-visible { outline: 3px solid var(--red); outline-offset: -4px; }
-.product-card-link:is(:hover, :focus-visible) .text-link { color: var(--red); }
-.product-card-link:is(:hover, :focus-visible) .text-link .icon { transform: translate(3px, -3px); }
-
-.brx-hero { padding: clamp(55px, 7vw, 100px) 0; }
-.brx-hero .wrap { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(28px, 6vw, 80px); }
-.brx-hero h1 { font-size: clamp(48px, 9vw, 110px); line-height: 1; letter-spacing: -.07em; margin: 14px 0; }
-.brx-lead { font-size: clamp(20px, 3vw, 34px); font-weight: 650; margin: 0 0 14px; }
-.brx-description { max-width: 510px; line-height: 1.75; color: var(--muted); margin-bottom: 25px; }
-.brx-back { display: inline-block; color: var(--muted); margin-bottom: 24px; }
-.brx-back:hover { color: var(--red); }
-.brx-art { margin: 0; padding: 24px; text-align: center; background: #edf2f4; border: 1px solid var(--line); border-radius: 12px; }
-.brx-art-media { width: min(100%, 464px); margin-inline: auto; aspect-ratio: 8 / 7; }
-.brx-art-media img, .brx-art-media video { display: block; width: 100%; height: auto; aspect-ratio: 8 / 7; object-fit: contain; }
-.brx-art-media video { pointer-events: none; }
-.brx-art figcaption { color: var(--muted); font-size: 12px; margin-top: 12px; }
-.brx-specs { background: #fff; border-top: 1px solid var(--line); scroll-margin-top: 85px; }
-.brx-summary { display: flex; flex-wrap: wrap; gap: 12px 30px; margin: 0 0 26px; }
-.brx-summary dt { color: var(--muted); font-size: 12px; font-weight: 600; }
-.brx-summary dd { margin: 4px 0 0; font-size: 17px; font-weight: 650; }
-.brx-actions { display: flex; flex-wrap: wrap; gap: 10px; }
-.brx-actions .button { min-height: 44px; text-align: center; }
-.brx-spec-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 24px 0; }
-.brx-spec-group { padding: clamp(16px, 2.5vw, 28px); border: 1px solid var(--line); border-radius: 8px; }
-.brx-spec-group h3 { margin: 0 0 10px; font-size: 21px; font-weight: 650; }
-.brx-spec-group dl { margin: 0; }
-.brx-spec-group dl > div { padding: 9px 0; border-bottom: 1px solid var(--line); }
-.brx-spec-group dl > div:last-child { padding-bottom: 0; border-bottom: 0; }
-.brx-spec-group dt { font-size: 13px; font-weight: 650; }
-.brx-spec-group dd { margin: 2px 0 0; color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
-.faq-list p a { color: var(--ink); text-decoration: underline; text-underline-offset: .15em; }
-.brx-spec-note { color: var(--muted); max-width: 76ch; line-height: 1.65; }
-
+/* BRX-100 detail page. All product measurements remain authored in HTML. */
+.brx-hero {
+  padding-block: clamp(32px, 6vw, 72px);
+}
+.brx-hero .wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
+}
+.brx-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.brx-back:hover {
+  color: var(--red);
+}
+.brx-hero h1 {
+  font-size: clamp(44px, 5.6vw, 76px);
+  margin: 0 0 16px;
+  letter-spacing: -0.04em;
+}
+.brx-lead {
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.4;
+  font-weight: 600;
+  margin-bottom: 20px;
+  max-width: 32ch;
+}
+.brx-description {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 53ch;
+}
+.brx-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  margin: 24px 0;
+  padding-block: 16px;
+  border-block: 1px solid var(--line);
+}
+.brx-summary dt {
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+.brx-summary dd {
+  margin: 4px 0 0;
+  font-size: 18px;
+  font-weight: 650;
+}
+.brx-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.brx-art {
+  margin: 0;
+  padding: 24px;
+  background: #edf2f4;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+.brx-art-media {
+  width: min(100%, 464px);
+  margin-inline: auto;
+  aspect-ratio: 8 / 7;
+}
+.brx-art-media img,
+.brx-art-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 7;
+  object-fit: contain;
+}
+.brx-art-media video {
+  pointer-events: none;
+}
+.brx-art figcaption {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  text-align: center;
+  margin-top: 12px;
+}
+.brx-specs {
+  background: white;
+  border-top: 1px solid var(--line);
+}
+.brx-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-block: 24px;
+}
+.brx-spec-group {
+  padding: 24px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.brx-spec-group h3 {
+  margin-bottom: 16px;
+}
+.brx-spec-group dl {
+  margin: 0;
+}
+.brx-spec-group dl > div {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.brx-spec-group dl > div:last-child {
+  border: 0;
+  padding-bottom: 0;
+}
+.brx-spec-group dt {
+  font-size: var(--text-sm);
+  font-weight: 650;
+}
+.brx-spec-group dd {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: var(--text-sm);
+  overflow-wrap: anywhere;
+}
+.brx-spec-note {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  max-width: 80ch;
+  margin-bottom: 0;
+}
+.imu-resources {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.imu-resource-head,
+.resource-library-title {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 48px;
+  margin-bottom: 28px;
+}
+.imu-resource-head h2,
+.resource-library-title h3 {
+  margin: 0;
+}
+.imu-resource-head > p,
+.resource-library-title > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-sm);
+  max-width: 60ch;
+}
+.resource-document {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.resource-pdf-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 56px;
+  color: var(--ink);
+}
+.resource-pdf-icon svg {
+  width: 42px;
+  height: 50px;
+}
+.resource-pdf-icon span {
+  position: absolute;
+  bottom: 9px;
+  left: 6px;
+  font-size: 11px;
+  font-weight: 750;
+  color: var(--red);
+  background: white;
+}
+.resource-pdf-copy {
+  flex: 1;
+  min-width: 0;
+}
+.resource-pdf-copy h3 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+.resource-pdf-copy > p {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  margin: 0;
+}
+.resource-pdf-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.resource-pdf-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+.resource-pdf-view:hover {
+  border-color: var(--ink);
+}
+.resource-pdf-actions .resource-pdf-download {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+.resource-pdf-download:hover {
+  background: var(--accent-hover);
+}
+.resource-library-title {
+  margin-top: 48px;
+}
+.resource-platform-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.resource-platform {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 20px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.resource-platform-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.resource-platform-name {
+  font-size: 21px;
+  font-weight: 650;
+}
+.resource-version {
+  color: var(--muted);
+  font: var(--text-xs)/1.4 var(--mono);
+}
+.resource-platform p {
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 16px 0 8px;
+}
+.resource-status {
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.resource-download {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  padding-top: 12px;
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+  font-size: var(--text-sm);
+  font-weight: 650;
+}
+.resource-download:hover,
+.resource-alt-download:hover {
+  color: var(--red);
+}
+.resource-alt-download {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--text-xs);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 1100px) {
+  .resource-platform-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .resource-document {
+    flex-wrap: wrap;
+  }
+  .resource-pdf-actions {
+    margin-left: auto;
+  }
+}
 @media (max-width: 700px) {
-  .brx-hero { padding-block: 28px 52px; }
-  .brx-hero .wrap { grid-template-columns: 1fr; gap: 20px; }
-  .brx-hero-copy { display: contents; }
-  .brx-hero-intro { grid-row: 1; }
-  .brx-hero .brx-back { margin-bottom: 10px; }
-  .brx-hero .brx-lead { margin-bottom: 0; }
-  .brx-hero .brx-art { grid-row: 2; padding: 12px; }
-  .brx-hero-details { grid-row: 3; }
-  .brx-spec-grid { grid-template-columns: 1fr; }
+  .brx-hero {
+    padding-block: 20px 40px;
+  }
+  .brx-hero .wrap {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .brx-hero-copy {
+    display: contents;
+  }
+  .brx-hero-intro {
+    grid-row: 1;
+  }
+  .brx-back {
+    margin-bottom: 4px;
+  }
+  .brx-hero h1 {
+    margin-bottom: 12px;
+  }
+  .brx-lead {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+  .brx-art {
+    grid-row: 2;
+    padding: 12px;
+  }
+  .brx-hero-details {
+    grid-row: 3;
+  }
+  .brx-description {
+    font-size: 15px;
+  }
+  .brx-summary {
+    gap: 16px 20px;
+  }
+  .brx-summary dd {
+    font-size: 16px;
+  }
+  .brx-spec-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .brx-spec-group {
+    padding: 20px;
+  }
+  .imu-resource-head,
+  .resource-library-title {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .resource-document {
+    padding: 20px;
+    gap: 16px;
+  }
+  .resource-pdf-copy h3 {
+    font-size: 19px;
+  }
+  .resource-pdf-actions {
+    width: 100%;
+    margin: 4px 0 0;
+  }
+  .resource-pdf-actions a {
+    flex: 1;
+    font-size: 13px;
+    text-align: center;
+  }
+  .resource-platform-grid {
+    gap: 12px;
+  }
+  .resource-platform {
+    padding: 16px;
+  }
+}
+@media (max-width: 430px) {
+  .resource-platform-grid {
+    grid-template-columns: 1fr;
+  }
 }

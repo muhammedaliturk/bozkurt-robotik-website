@@ -1,0 +1,50 @@
+/* Shared design language. Runtime has no font or framework dependencies. */
+:root {
+  --paper: #f7f9fb;
+  --white: #ffffff;
+  --surface: #edf2f5;
+  --ink: #142d3c;
+  --muted: #526675;
+  --line: #d6e0e6;
+  --red: #c52e25;
+  --accent-hover: #a8241d;
+  --accent-soft: #fff0ed;
+  --dark: #112b3b;
+  --dark-surface: #1b384a;
+  --on-dark-muted: #c2d1da;
+  --on-dark-accent: #ff9c8e;
+  --focus: #1265ba;
+  --font: "Segoe UI", Arial, Helvetica, sans-serif;
+  --mono: Consolas, "Courier New", monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --title-xl: clamp(2rem, 4.5vw, 3.75rem);
+  --title-lg: clamp(1.75rem, 3.3vw, 2.75rem);
+  --title-md: clamp(1.125rem, 1.8vw, 1.5rem);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow: 0 8px 24px #142d3c08;
+  --shadow-raised: 0 14px 32px #142d3c12;
+  --container: 1248px;
+  --gutter: clamp(16px, 4vw, 64px);
+  --header: 80px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration: 180ms;
+  --duration-reveal: 380ms;
+}
+@media (max-width: 960px) {
+  :root {
+    --header: 72px;
+  }
+}
